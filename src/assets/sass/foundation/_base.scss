@@ -1,0 +1,4 @@
+@use "../global" as global;
+body {
+  font-family: global.$font-ja;
+}

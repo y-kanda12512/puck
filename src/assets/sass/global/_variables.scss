@@ -1,0 +1,39 @@
+// 共通カラー
+$color-white: #ffffff;
+$color-black: #222222;
+$color-dark-gray: #9e9e9e;
+$color-light-gray-1: #e0e0e0;
+$color-light-gray-2: #fbfbfb;
+
+// リンク・状態
+$color-link-focus: #1971ff;
+$color-warn: #f14624;
+$color-success: #008d56;
+$color-error: #ffede6;
+
+// あしらい
+$color-treat-1: #e1effa;
+$color-treat-2: #fdeef1;
+$color-treat-3: #5eb342;
+$color-treat-4: #f7e070;
+
+$color-btn-1: #9fdb8b;
+$color-btn-2: #a0d0f1;
+
+$font-ja: "Zen Kaku Gothic New", serif;
+$font-en: "Ruda", serif;
+
+$breakpoints: (
+  mini: "screen and (max-width: 374px)",
+  sm: "screen and (min-width: 480px)",
+  md: "screen and (min-width: 768px)",
+  lg: "screen and (min-width: 900px)",
+  xl: "screen and (min-width: 1200px)",
+);
+
+$layer: (
+  header: 10,
+  drawer-content: 20,
+  drawer-icon: 30,
+  default: 1,
+);
