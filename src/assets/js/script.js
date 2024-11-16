@@ -1,24 +1,96 @@
-document.addEventListener("DOMContentLoaded", function () {
-  let toTopButton = document.querySelector(".to-top");
+// ハンバーガーメニュー
+document.addEventListener("DOMContentLoaded", () => {
+  //定義
+  const drawerIcon = document.querySelector(".p-drawer__icon");
+  const drawer = document.querySelector(".p-drawer");
+  const drawerNavItem = document.querySelectorAll('.p-drawer__body a[href^="#"]');
+  const headerHeight = document.querySelector("header").offsetHeight;
+  const drawerText = document.querySelector(".p-drawer__icon-text span");
+  const body = document.querySelector("body");
+  const breakpoint = 900;
+  let isMenuOpen = false;
+  let isMenuOpenAtBreakpoint = false;
 
-  // スクロールイベントを監視してTo Topボタンを制御
-  window.addEventListener("scroll", function () {
-    // 現在のスクロール位置を取得
-    let scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
-    // スクロール位置が一定値よりも大きい場合にTo Topボタンを表示、それ以外は非表示にする
-    if (scrollPosition > 300) {
-      toTopButton.classList.add("js-show");
+  const drawerChangeTextFade = () => {
+    if (drawerText.classList.contains("js-open")) {
+      drawerText.innerHTML = "menu";
+      drawerText.classList.toggle("js-open");
     } else {
-      toTopButton.classList.remove("js-show");
+      drawerText.innerHTML = "close";
+      drawerText.classList.toggle("js-open");
     }
-  });
+  };
 
-  // To Topボタンがクリックされたときにページの先頭にスクロールする
-  toTopButton.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+  //メニューを開くアニメーション
+  const openMenu = () => {
+    if (!drawer.classList.contains("js-show")) {
+      drawer.classList.add("js-show");
+      drawerIcon.classList.add("js-show");
+      drawerChangeTextFade();
+      body.style.overflow = "hidden";
+    }
+  };
+  //メニューを閉じるアニメーション
+  const closeMenu = () => {
+    if (drawer.classList.contains("js-show")) {
+      drawer.classList.remove("js-show");
+      drawerIcon.classList.remove("js-show");
+      drawerChangeTextFade();
+      body.style.overflow = "visible";
+      isMenuOpen = false;
+    }
+  };
+  //メニューの開閉動作
+  const toggleMenu = () => {
+    if (!drawer.classList.contains("js-show")) {
+      openMenu();
+    } else {
+      closeMenu();
+    }
+  };
+  //リサイズ処理
+  const handleResize = () => {
+    const bp = breakpoint;
+    const windowWidth = window.innerWidth;
+    if (windowWidth > bp && isMenuOpenAtBreakpoint) {
+      closeMenu();
+    } else if (windowWidth <= bp && drawer.classList.contains("js-show")) {
+      isMenuOpenAtBreakpoint = true;
+    }
+  };
+  //メニュー外クリック処理
+  const clickOuter = (event) => {
+    if (drawer.classList.contains("js-show") && !drawer.contains(event.target) && isMenuOpen) {
+      closeMenu();
+    } else if (drawer.classList.contains("js-show") && !drawer.contains(event.target)) {
+      isMenuOpen = true;
+    }
+  };
+  //該当箇所までスクロール
+  const linkScroll = (target) => {
+    if (target) {
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = targetPosition - headerHeight;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  //アイコン クリック時
+  drawerIcon.addEventListener("click", toggleMenu);
+  //画面幅リサイズ時
+  window.addEventListener("resize", handleResize);
+  //メニュー外クリック時
+  document.addEventListener("click", clickOuter);
+  //ページ内リンクメニュー クリック時
+  drawerNavItem.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      closeMenu();
+      const targetItem = document.querySelector(item.getAttribute("href"));
+      linkScroll(targetItem);
     });
   });
 });
