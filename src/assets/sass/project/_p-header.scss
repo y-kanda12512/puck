@@ -5,13 +5,15 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: map-get(global.$layer, header);
+  background: global.$color-white;
 }
 
 .p-header__inner {
   width: 100%;
   padding-inline: 16px;
   margin-inline: auto;
-  padding-top: 13.83px;
+  padding-block: 13.83px;
 
   @include global.mq(sm) {
     width: 100%;
@@ -39,7 +41,7 @@
 
 .p-header__logo-img {
   width: 156.579px;
-  height: 58.333px;
+  height: 58.35px;
   object-fit: contain;
 
   @include global.mq(lg) {

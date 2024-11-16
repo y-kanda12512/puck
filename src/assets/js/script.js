@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const drawerNavItem = document.querySelectorAll('.p-drawer__body a[href^="#"]');
   const headerHeight = document.querySelector("header").offsetHeight;
   const drawerText = document.querySelector(".p-drawer__icon-text span");
+  const body = document.querySelector("body");
   const breakpoint = 900;
   let isMenuOpen = false;
   let isMenuOpenAtBreakpoint = false;
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       drawer.classList.add("js-show");
       drawerIcon.classList.add("js-show");
       drawerChangeTextFade();
+      body.style.overflow = "hidden";
     }
   };
   //メニューを閉じるアニメーション
@@ -34,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       drawer.classList.remove("js-show");
       drawerIcon.classList.remove("js-show");
       drawerChangeTextFade();
+      body.style.overflow = "visible";
       isMenuOpen = false;
     }
   };
