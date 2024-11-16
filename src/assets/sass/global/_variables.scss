@@ -19,9 +19,12 @@ $color-treat-4: #f7e070;
 
 $color-btn-1: #9fdb8b;
 $color-btn-2: #a0d0f1;
+$color-btn-3: #f7bed4;
 
 $font-ja: "Zen Kaku Gothic New", serif;
 $font-en: "Ruda", serif;
+
+$font-size-base: 16px;
 
 $breakpoints: (
   mini: "screen and (max-width: 374px)",
@@ -29,6 +32,7 @@ $breakpoints: (
   md: "screen and (min-width: 768px)",
   lg: "screen and (min-width: 900px)",
   xl: "screen and (min-width: 1200px)",
+  xxl: "screen and (min-width: 1400px)",
 );
 
 $layer: (

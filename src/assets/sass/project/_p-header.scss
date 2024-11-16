@@ -1,1 +1,184 @@
 @use "../global" as global;
+
+.p-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.p-header__inner {
+  width: min(calc(343px + 16px * 2), 100%);
+  padding-inline: 16px;
+  margin-inline: auto;
+  padding-top: 13.83px;
+
+  @include global.mq(sm) {
+    width: min(calc(700px + 20px * 2), 100%);
+    padding-inline: 20px;
+  }
+
+  @include global.mq(lg) {
+    width: min(calc(1310px + 20px * 2), 100%);
+    margin-inline: auto;
+    padding-top: 24.75px;
+  }
+}
+
+.p-header__upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-header__logo-title {
+  display: flex;
+  align-items: center;
+  column-gap: 11px;
+}
+
+.p-header__logo-img {
+  width: 156.579px;
+  height: 58.333px;
+  object-fit: contain;
+
+  @include global.mq(lg) {
+    width: 180px;
+    height: 80px;
+  }
+
+  @include global.mq(xl) {
+    width: 209px;
+    height: 87.5px;
+  }
+}
+
+.p-header__title {
+  display: none;
+
+  @include global.mq(lg) {
+    display: block;
+    width: 140px;
+    padding-left: 24px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: 0.32px;
+  }
+
+  @include global.mq(xl) {
+    padding-left: 32px;
+    width: auto;
+  }
+}
+
+.p-header__nav {
+  display: none;
+  @include global.mq(lg) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.p-header__list {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  margin-left: 10px;
+
+  @include global.mq(xl) {
+    column-gap: 32px;
+  }
+
+  li a {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: 0.32px;
+
+    img {
+      width: 31px;
+      height: 33px;
+      aspect-ratio: 1;
+    }
+  }
+}
+
+.p-header__btn {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-left: 24px;
+  padding: 16px 24px;
+  background: global.$color-btn-3;
+  font-family: global.$font-en;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 100vmax;
+
+  @include global.mq(xl) {
+    margin-left: 32px;
+  }
+}
+
+.p-header__btn-img {
+  width: 32px;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.p-header__bottom {
+  display: none;
+
+  @include global.mq(lg) {
+    display: block;
+    margin-top: 36px;
+  }
+}
+
+.p-header__in-page-links {
+}
+
+.p-header__in-page-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  column-gap: 66.7px;
+  row-gap: 20px;
+
+  li a {
+    padding-inline: 16px;
+    position: relative;
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: 0.32px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      translate: 0 -50%;
+      width: 8px;
+      height: auto;
+      aspect-ratio: 1;
+      border-radius: 100%;
+      background: global.$color-treat-4;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+}

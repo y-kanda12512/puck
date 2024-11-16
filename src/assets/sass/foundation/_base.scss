@@ -1,4 +1,6 @@
 @use "../global" as global;
 body {
   font-family: global.$font-ja;
+  color: global.$color-black;
+  font-size: global.$font-size-base;
 }
