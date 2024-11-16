@@ -8,13 +8,13 @@
 }
 
 .p-header__inner {
-  width: min(calc(343px + 16px * 2), 100%);
+  width: 100%;
   padding-inline: 16px;
   margin-inline: auto;
   padding-top: 13.83px;
 
   @include global.mq(sm) {
-    width: min(calc(700px + 20px * 2), 100%);
+    width: 100%;
     padding-inline: 20px;
   }
 
