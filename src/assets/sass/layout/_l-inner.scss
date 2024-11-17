@@ -1,2 +1,5 @@
-.l-inner{
+.l-inner {
+    width: min(calc( +  * 2), 100%);
+    padding-inline: ;
+    margin-inline: auto;
 }
