@@ -82,8 +82,9 @@
 }
 
 .p-drawer {
+  display: block;
   position: fixed;
-  top: global.$header-height;
+  top: global.$header-height-sp;
   left: 0;
   width: 100%;
   height: auto;
@@ -91,6 +92,11 @@
   transition: translate 0.3s ease;
   translate: 0 -101%;
   z-index: map-get(global.$layer, drawer-content);
+  background: global.$color-white;
+
+  @include global.mq(lg) {
+    display: none;
+  }
 
   &.js-show {
     translate: 0;
@@ -103,7 +109,7 @@
   flex-direction: column;
   row-gap: 40px;
   width: 100%;
-  height: calc(100vh - global.$header-height);
+  height: calc(100vh - global.$header-height-sp);
   padding: 12px 20px 28px; // 下部余白を戻す
   overflow-y: auto;
 }

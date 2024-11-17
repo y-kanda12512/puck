@@ -1,0 +1,273 @@
+@use "../global" as global;
+
+.p-fv {
+  margin-top: 16.5px;
+
+  @include global.mq(lg) {
+    margin-top: 16px;
+  }
+}
+
+.p-fv__inner {
+  position: relative;
+
+  @include global.mq(lg) {
+    width: min(calc(1184px + 20px * 2), 100%);
+    padding-inline: 20px;
+    margin-inline: auto;
+  }
+}
+
+.p-fv__main-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: calc((300 / 375) * 100%);
+  border: 8px solid global.$color-white;
+  border-radius: 40px;
+  overflow: hidden;
+
+  @include global.mq(lg) {
+    width: calc((860 / 1230) * 100%);
+    border-radius: 80px;
+    right: 20px;
+    // right: calc(50% - 589px);
+  }
+
+  img {
+    width: 100%;
+    height: 434px;
+    object-fit: cover;
+
+    @include global.mq(md) {
+      height: 480px;
+    }
+
+    @include global.mq(lg) {
+      height: 560px;
+    }
+  }
+}
+
+.p-fv__text-balloon-wrap {
+  display: flex;
+  flex-direction: column;
+  padding-top: 17px;
+
+  @include global.mq(lg) {
+    padding-top: 24px;
+  }
+}
+
+.p-fv__text-balloon {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.4px;
+
+    @include global.mq(md) {
+      font-size: 24px;
+    }
+
+    @include global.mq(lg) {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.57;
+      letter-spacing: 0.56px;
+    }
+  }
+
+  &:nth-of-type(1) {
+    margin-left: 118px;
+
+    @include global.mq(lg) {
+      margin-left: 16px;
+    }
+
+    .p-fv__text-balloon-img {
+      width: 126px;
+      height: 98px;
+
+      @include global.mq(md) {
+        width: 150px;
+        height: 122px;
+      }
+
+      @include global.mq(lg) {
+        width: 208px;
+        height: 167px;
+      }
+    }
+
+    &::before {
+      content: "だいすき！";
+      top: 31px;
+      left: 15px;
+
+      @include global.mq(md) {
+        top: 40px;
+        left: 20px;
+      }
+
+      @include global.mq(lg) {
+        top: 62px;
+        left: 38px;
+      }
+    }
+  }
+
+  &:nth-of-type(2) {
+    margin-top: -4px;
+    margin-left: 62px;
+
+    @include global.mq(lg) {
+      margin-top: -40px;
+      margin-left: 160px;
+    }
+
+    @include global.mq(xl) {
+      margin-top: -40px;
+      margin-left: 219.5px;
+    }
+
+    .p-fv__text-balloon-img {
+      width: 129px;
+      height: 96px;
+
+      @include global.mq(md) {
+        width: 153px;
+        height: 120px;
+      }
+
+      @include global.mq(lg) {
+        width: 208px;
+        height: 168px;
+      }
+    }
+
+    &::before {
+      content: "たのしい！";
+      top: 30px;
+      left: 17px;
+
+      @include global.mq(md) {
+        top: 40px;
+        left: 20px;
+      }
+
+      @include global.mq(lg) {
+        top: 63px;
+        left: 38px;
+      }
+    }
+  }
+
+  &:nth-of-type(3) {
+    margin-top: -4px;
+    margin-left: 10px;
+
+    @include global.mq(lg) {
+      margin-left: 16px;
+      margin-top: -40px;
+    }
+
+    .p-fv__text-balloon-img {
+      width: 126px;
+      height: 98px;
+
+      @include global.mq(md) {
+        width: 150px;
+        height: 122px;
+      }
+
+      @include global.mq(lg) {
+        width: 208px;
+        height: 168px;
+      }
+    }
+
+    &::before {
+      content: "できた！";
+      top: 31px;
+      left: 25px;
+
+      @include global.mq(md) {
+        top: 41px;
+        left: 29px;
+      }
+
+      @include global.mq(lg) {
+        top: 63px;
+        left: 53px;
+      }
+    }
+  }
+}
+
+.p-fv__text-balloon-img {
+  @include global.mq(md) {
+    width: 170px;
+    height: 120px;
+  }
+}
+
+.p-fv__text-wrap {
+  margin-top: 10px;
+
+  @include global.mq(lg) {
+    margin-top: 16px;
+  }
+}
+
+.p-fv__text-top {
+  width: fit-content;
+  padding-left: 32px;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.4px;
+  background: global.$color-light-gray-2;
+
+  @include global.mq(md) {
+    font-size: 24px;
+  }
+
+  @include global.mq(lg) {
+    padding-left: 160px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.57;
+    letter-spacing: 0.56px;
+  }
+}
+
+.p-fv__text-under {
+  max-width: 323px;
+  padding: 12px 12px 12px 32px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.32px;
+  background: global.$color-light-gray-2;
+  border-radius: 0 16px 16px 0;
+
+  @include global.mq(md) {
+    font-size: 20px;
+    max-width: 400px;
+  }
+
+  @include global.mq(lg) {
+    max-width: 791px;
+    padding: 24px 12px 12px 24px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.4px;
+    border-radius: 0 24px 24px 0;
+  }
+}
