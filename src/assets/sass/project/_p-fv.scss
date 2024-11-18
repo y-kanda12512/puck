@@ -1,6 +1,6 @@
 @use "../global" as global;
-
 .p-fv {
+  position: relative;
   margin-top: 16.5px;
 
   @include global.mq(lg) {

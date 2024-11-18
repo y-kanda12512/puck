@@ -1,0 +1,75 @@
+@use "../global" as global;
+.p-about {
+  margin-top: 24px;
+
+  @include global.mq(lg) {
+    margin-top: 80px;
+  }
+}
+
+.p-about__inner {
+}
+
+.p-about__card {
+  padding: 40px 18px;
+  border-radius: 40px;
+  background: global.$color-white;
+
+  @include global.mq(sm) {
+    padding: 40px 24px;
+  }
+
+  @include global.mq(md) {
+    padding: 48px 32px;
+  }
+
+  @include global.mq(lg) {
+    padding: 40px;
+    border-radius: 80px;
+  }
+}
+
+.p-about__card__content {
+}
+
+.p-about__flex-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 16px;
+
+  @include global.mq(lg) {
+    flex-direction: row;
+    column-gap: calc((32 / 960) * 100%);
+  }
+}
+
+.p-about__text {
+  margin-top: 32px;
+  // 全体の余白は下の画像を基準に合わせているのでテキストは足りない分足してあげる
+  padding-inline: 6px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.32px;
+
+  @include global.mq(lg) {
+    padding-inline: 28px;
+  }
+
+  @include global.mq(xl) {
+    padding-inline: 40px;
+  }
+}
+
+.p-about__img {
+  @include global.mq(lg) {
+    flex-shrink: 0;
+    width: calc((400 / 960) * 100%);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 40px;
+    object-fit: cover;
+  }
+}
