@@ -8,6 +8,22 @@
 }
 
 .p-about__inner {
+  width: min(calc(343px + 16px * 2), 100%);
+  padding-inline: 16px;
+  margin-inline: auto;
+
+  @include global.mq(sm) {
+    width: min(calc(500px + 20px * 2), 100%);
+  }
+
+  @include global.mq(md) {
+    width: min(calc(640px + 20px * 2), 100%);
+  }
+
+  @include global.mq(lg) {
+    width: min(calc(1040px + 20px * 2), 100%);
+    padding-inline: 20px;
+  }
 }
 
 .p-about__card {
