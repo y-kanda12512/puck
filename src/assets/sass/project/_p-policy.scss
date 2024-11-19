@@ -14,7 +14,11 @@
   padding-block: 33px 6px;
 
   @include global.mq(sm) {
-    padding-bottom: 32px;
+    padding-block: 33px 150px;
+  }
+
+  @include global.mq(md) {
+    padding-block: 33px 119px;
   }
 
   @include global.mq(lg) {
@@ -35,15 +39,20 @@
     top: 0;
     left: 50%;
     translate: -50%;
-    width: 1000px;
+    width: 880px;
     height: 1049px;
     border-radius: 50%;
-    background: global.$color-black;
-    opacity: 0.3;
+    background: global.$color-white;
+    z-index: map-get(global.$layer, policy-background-circle);
 
     @include global.mq(sm) {
-      width: 1200px;
-      height: 1000px;
+      width: 1520px;
+      height: 1130px;
+    }
+
+    @include global.mq(md) {
+      width: 1450px;
+      height: 750px;
     }
 
     @include global.mq(lg) {
@@ -70,10 +79,11 @@
 
   @include global.mq(sm) {
     width: min(calc(500px + 20px * 2), 100%);
+    padding-inline: 20px;
   }
 
   @include global.mq(md) {
-    width: min(calc(640px + 20px * 2), 100%);
+    width: min(calc(660px + 20px * 2), 100%);
   }
 
   @include global.mq(lg) {
@@ -99,12 +109,18 @@
   align-items: center;
   padding: 16px 20px;
 
-  @include global.mq(lg) {
+  @include global.mq(sm) {
+  }
+
+  @include global.mq(md) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 36px;
     row-gap: 32px;
+  }
+
+  @include global.mq(lg) {
   }
 
   @include global.mq(xl) {
@@ -115,6 +131,10 @@
 .p-policy__box {
   width: fit-content;
   padding-inline: 24px;
+
+  @include global.mq(mini) {
+    padding-inline: 10px;
+  }
 }
 
 .p-policy__box-title {
@@ -141,6 +161,10 @@
     height: auto;
     aspect-ratio: 1;
 
+    @include global.mq(sm) {
+      width: 120px;
+    }
+
     @include global.mq(lg) {
       width: 200px;
     }
@@ -162,10 +186,17 @@
     left: 18px;
 
     @include global.mq(sm) {
-      width: 140px;
-      height: 199px;
+      width: 165px;
+      height: 224px;
       top: 400px;
       left: 18px;
+    }
+
+    @include global.mq(md) {
+      width: 180px;
+      height: 280px;
+      top: -64px;
+      left: 20px;
     }
 
     @include global.mq(lg) {
@@ -191,10 +222,17 @@
     scale: -1 1;
 
     @include global.mq(sm) {
-      width: 145px;
-      height: 210px;
+      width: 170px;
+      height: 235px;
       top: 700px;
       right: 8px;
+    }
+
+    @include global.mq(md) {
+      width: 180px;
+      height: 280px;
+      top: 500px;
+      right: 15px;
     }
 
     @include global.mq(lg) {
