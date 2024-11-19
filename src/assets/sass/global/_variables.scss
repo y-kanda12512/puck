@@ -36,12 +36,14 @@ $breakpoints: (
   lg: "screen and (min-width: 900px)",
   xl: "screen and (min-width: 1200px)",
   xxl: "screen and (min-width: 1400px)",
+  xxxl: "screen and (min-width: 1600px)",
 );
 
 $layer: (
   header: 25,
   drawer-content: 20,
   drawer-icon: 30,
-  background-balloon: -10,
+  policy-background-circle: -15,
+  policy-background-balloon: -10,
   default: 1,
 );
