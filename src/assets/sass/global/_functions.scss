@@ -1,0 +1,3 @@
+@function programSectionBoxMarginLeft($innerPadding) {
+  @return calc((($innerPadding - 63) / 1314) * 100%);
+}

@@ -3,10 +3,9 @@
 .p-balloon-background {
   background-image: url(../img/background-balloon-1.png), url(../img/background-balloon-2.png), url(../img/background-balloon-3.png);
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: right -66px top 476px, left -70px top 1140px, right -84px top 2008px;
+  background-position: right -66px top 476px, left -70px top 1136px, right -84px top 2071px;
   background-size: 200px 203px;
 
-  // 24
   @include global.mq(sm) {
     background-image: url(../img/background-balloon-1.png), url(../img/background-balloon-2.png), url(../img/background-balloon-3.png);
     background-repeat: no-repeat, no-repeat, no-repeat;
@@ -14,7 +13,6 @@
     background-size: 250px 256px;
   }
 
-  // 40
   @include global.mq(md) {
     background-image: url(../img/background-balloon-1.png), url(../img/background-balloon-2.png), url(../img/background-balloon-3.png);
     background-repeat: no-repeat, no-repeat, no-repeat;
@@ -25,7 +23,7 @@
   @include global.mq(lg) {
     background-image: url(../img/background-balloon-1.png), url(../img/background-balloon-2.png), url(../img/background-balloon-3.png);
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: left calc(50% + 503px) top 639px, right calc(50% + 572px) top 997px, left calc(50% + 579px) top 1819px;
+    background-position: left calc(50% + 503px) top 639px, right calc(50% + 572px) top 1060px, left calc(50% + 579px) top 1819px;
     background-size: 600px 603px, 600px 600px;
   }
 }

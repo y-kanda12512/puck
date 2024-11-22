@@ -1,24 +1,28 @@
 @use "../global" as global;
 .p-policy {
-  margin-top: 15px;
+  margin-top: 19.64px;
   position: relative;
 
   @include global.mq(lg) {
-    margin-top: 58px;
+    margin-top: 70px;
   }
 }
 
 .p-policy__wrap {
   overflow: hidden;
   position: relative;
-  padding-block: 33px 6px;
+  padding-block: 28.36px 6px;
+
+  @include global.mq(mini) {
+    padding-block: 28px 32px;
+  }
 
   @include global.mq(sm) {
-    padding-block: 33px 150px;
+    padding-block: 33px 30px;
   }
 
   @include global.mq(md) {
-    padding-block: 33px 119px;
+    padding-block: 33px 58px;
   }
 
   @include global.mq(lg) {
@@ -26,11 +30,11 @@
   }
 
   @include global.mq(xl) {
-    padding-block: 69px 108px;
+    padding-block: 58px 108px;
   }
 
   @include global.mq(xxxl) {
-    padding-block: 75px 164px;
+    padding-block: 80px 164px;
   }
 
   &::before {
@@ -39,15 +43,19 @@
     top: 0;
     left: 50%;
     translate: -50%;
-    width: 880px;
-    height: 1049px;
+    width: 920px;
+    height: 1134.361px;
     border-radius: 50%;
     background: global.$color-white;
     z-index: map-get(global.$layer, policy-background-circle);
 
+    @include global.mq(mini) {
+      height: 1160px;
+    }
+
     @include global.mq(sm) {
-      width: 1520px;
-      height: 1130px;
+      width: 1600px;
+      height: 1178px;
     }
 
     @include global.mq(md) {
@@ -56,13 +64,13 @@
     }
 
     @include global.mq(lg) {
-      width: 1960px;
+      width: 2000px;
       height: 1040px;
     }
 
     @include global.mq(xxxl) {
-      width: 2500px;
-      height: 1100px;
+      width: 3000px;
+      height: 1140px;
     }
   }
 }
@@ -92,13 +100,22 @@
   }
 }
 
-.p-policy__text {
+.p-policy__text-main {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.4px;
+  text-align: center;
+}
+
+.p-policy__text-sub {
   font-weight: 400;
   line-height: 1.75;
   letter-spacing: 0.32px;
+  margin-top: 2px;
 
   @include global.mq(lg) {
-    max-width: 686px;
+    max-width: 821px;
     margin-inline: auto;
   }
 }
@@ -177,12 +194,14 @@
 
 .p-policy__balloon-img {
   position: absolute;
-  z-index: map-get(global.$layer, policy-background-balloon);
+  z-index: map-get(global.$layer, background-img-base);
 
   &:nth-of-type(1) {
     width: 126px;
     height: 185px;
-    top: 461px;
+    // top: 461px;
+    // left: 18px;
+    top: 545px;
     left: 18px;
 
     @include global.mq(sm) {
@@ -209,7 +228,7 @@
     @include global.mq(xl) {
       width: 252px;
       height: 371px;
-      top: -166px;
+      top: -113px;
       left: 96px;
     }
   }
@@ -217,7 +236,9 @@
   &:nth-of-type(2) {
     width: 131px;
     height: 196px;
-    top: 837px;
+    // top: 837px;
+    // right: 8px;
+    top: 923px;
     right: 8px;
     scale: -1 1;
 
@@ -243,7 +264,7 @@
     }
 
     @include global.mq(xl) {
-      top: 760px;
+      top: 811px;
       right: 83px;
     }
   }
