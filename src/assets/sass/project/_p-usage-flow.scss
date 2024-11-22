@@ -2,9 +2,19 @@
 .p-usage-flow {
   margin-top: 24px;
   background-color: global.$color-white;
+  padding-bottom: 32px;
+
+  @include global.mq(sm) {
+    padding-bottom: 73px;
+  }
+
+  @include global.mq(md) {
+    padding-bottom: 73px;
+  }
 
   @include global.mq(lg) {
     margin-top: 40px;
+    padding-bottom: 104px;
   }
 }
 
