@@ -1,0 +1,336 @@
+@use "../global" as global;
+.p-access {
+  margin-top: 24px;
+  position: relative;
+  overflow: hidden;
+
+  @include global.mq(lg) {
+    margin-top: 64px;
+  }
+}
+
+.p-access__inner {
+  width: min(calc(311px + 32px * 2), 100%);
+  padding-inline: 32px;
+  margin-inline: auto;
+
+  @include global.mq(mini) {
+    padding-inline: 20px;
+  }
+
+  @include global.mq(sm) {
+    width: min(calc(480px + 20px * 2), 100%);
+    padding-inline: 20px;
+  }
+
+  @include global.mq(md) {
+    width: min(calc(640px + 20px * 2), 100%);
+  }
+
+  @include global.mq(lg) {
+    width: min(calc(1184px + 20px * 2), 100%);
+  }
+
+  @include global.mq(xxl) {
+  }
+}
+
+.p-access__card {
+  border-radius: 40px 40px 4px 4px;
+  background: global.$color-white;
+
+  @include global.mq(lg) {
+    border-radius: 80px;
+  }
+}
+
+.p-access__card-inner {
+  padding: 24px 16px 20px;
+
+  @include global.mq(sm) {
+    padding: 28px 20px 24px;
+  }
+
+  @include global.mq(lg) {
+    padding: 64px;
+    max-width: calc(928px + 64px * 2);
+    margin-inline: auto;
+  }
+}
+
+.p-access__content {
+  margin-top: 24px;
+
+  @include global.mq(lg) {
+    margin-top: 32px;
+  }
+}
+
+.p-access__info {
+}
+
+.p-access__info-record {
+  display: flex;
+  flex-direction: column;
+  padding-block: 16px;
+  position: relative;
+  overflow: hidden;
+
+  @include global.mq(lg) {
+    flex-direction: row;
+    column-gap: 8px;
+    padding: 16px;
+  }
+
+  &::before {
+    content: "";
+    bottom: -5.5px;
+    left: -2px;
+    position: absolute;
+    background-size: 4px;
+    display: inline-block;
+    height: 10px;
+    width: 100%;
+    background: radial-gradient(circle farthest-side, global.$color-treat-3, global.$color-treat-3 25%, transparent 25%, transparent);
+  }
+}
+
+.p-access__info-head {
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.32px;
+
+  @include global.mq(lg) {
+    width: 110px;
+  }
+}
+
+.p-access__info-body {
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.32px;
+}
+
+.p-access__map {
+  &.--sp {
+    position: absolute;
+    width: 100%;
+    top: 734px;
+    left: 50%;
+    translate: -50%;
+    display: flex;
+    flex-direction: column;
+
+    @include global.mq(mini) {
+      top: 729px;
+    }
+
+    @include global.mq(lg) {
+      display: none;
+    }
+  }
+
+  &.--pc {
+    display: none;
+
+    @include global.mq(lg) {
+      position: relative;
+      display: block;
+      margin-top: 32px;
+    }
+  }
+}
+
+.p-access__map-wrap {
+}
+
+.p-access__map-img {
+  width: max(375px, 100%);
+  height: 157px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  // height: fit-content;
+
+  @include global.mq(sm) {
+    height: 300px;
+  }
+
+  @include global.mq(lg) {
+    height: 423px;
+  }
+
+  img {
+    width: 100vw;
+    object-fit: cover;
+  }
+}
+
+.p-access__map-body {
+  background: global.$color-white;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+
+  @include global.mq(lg) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 20px 0 0;
+    width: calc((700 / 928) * 100%);
+  }
+}
+
+.p-access__map-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  padding: 8px 32px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.35px;
+
+  @include global.mq(lg) {
+    row-gap: 1px;
+    padding: 16px 69px 16px 33px;
+  }
+}
+
+.p-access__map-icon {
+  position: absolute;
+  bottom: -19px;
+  right: 48px;
+  width: 113px;
+  height: 54px;
+
+  @include global.mq(mini) {
+    bottom: -54px;
+    right: 8px;
+  }
+
+  @include global.mq(sm) {
+    bottom: -50px;
+  }
+
+  @include global.mq(lg) {
+    bottom: 0;
+    right: 0;
+    width: 226px;
+    height: 108px;
+  }
+}
+
+.p-access__map-imgs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @include global.mq(sm) {
+    row-gap: 24px;
+  }
+
+  @include global.mq(lg) {
+    margin-top: 32px;
+    flex-direction: row;
+    column-gap: 32px;
+    align-items: center;
+  }
+}
+
+.p-access__imgs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15.45px;
+  margin-top: 368px;
+
+  @include global.mq(sm) {
+    row-gap: 24px;
+  }
+
+  @include global.mq(mini) {
+    margin-top: 430px;
+  }
+
+  @include global.mq(sm) {
+    margin-top: 550px;
+    max-width: 360px;
+    margin-inline: auto;
+  }
+
+  @include global.mq(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0;
+    column-gap: 16px;
+    max-width: 496px;
+    width: calc((496 / 928) * 100%);
+  }
+}
+
+.p-access__img {
+  border-radius: 20px;
+  height: fit-content;
+
+  @include global.mq(lg) {
+    width: calc((240 / 496) * 100%);
+  }
+
+  img {
+    width: 100%;
+    // height: 348.75px;
+    object-fit: cover;
+
+    @include global.mq(lg) {
+      width: 100%;
+      height: 300px;
+    }
+  }
+
+  // position: relative;
+
+  // &::before {
+  //   position: absolute;
+  //   right: 0;
+  //   bottom: 0;
+  //   white-space: pre;
+  //   background: global.$color-white;
+  //   padding: 20px 0 20px 12px;
+  //   border-top-left-radius: 20px;
+
+  //   font-size: 14px;
+  //   font-weight: 400;
+  //   line-height: 1.71;
+  //   letter-spacing: 0.35px;
+  //   text-align: right;
+  // }
+
+  // &:nth-of-type(1) {
+  //   &::before {
+  //     content: "コープ野村旗の台の外観です";
+  //   }
+  // }
+
+  // &:nth-of-type(2) {
+  //   &::before {
+  //     content: "階段を上り踊り場を右に\A曲がるとぷっくの入り口です";
+  //   }
+  // }
+}
+
+.p-access__google-map {
+  @include global.mq(lg) {
+    flex: 1;
+  }
+
+  iframe {
+    width: 100%;
+    height: 225px;
+
+    @include global.mq(sm) {
+      height: 350px;
+    }
+
+    @include global.mq(lg) {
+      height: 300px;
+    }
+  }
+}
