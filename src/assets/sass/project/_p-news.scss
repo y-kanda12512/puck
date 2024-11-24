@@ -1,0 +1,265 @@
+@use "../global" as global;
+.p-news {
+  padding-block: 24px;
+  position: relative;
+  background: global.$color-white;
+
+  @include global.mq(lg) {
+    padding-block: 40px;
+  }
+}
+
+.p-news__head-img {
+  position: absolute;
+  object-fit: contain;
+
+  &:nth-of-type(1) {
+    width: 102px;
+    height: 86px;
+    top: -16.5px;
+    right: calc(50% + 70px);
+
+    @include global.mq(lg) {
+      width: 204px;
+      height: 172px;
+      top: -15.5px;
+      right: calc(50% + 220px);
+    }
+
+    @include global.mq(xl) {
+      right: calc(50% + 287px);
+    }
+  }
+
+  &:nth-of-type(2) {
+    width: 84px;
+    height: 101px;
+    top: -22px;
+    left: calc(50% + 83px);
+
+    @include global.mq(lg) {
+      width: 151px;
+      height: 193px;
+      top: -32px;
+      left: calc(50% + 220px);
+    }
+
+    @include global.mq(xl) {
+      left: calc(50% + 287px);
+    }
+  }
+}
+
+.p-news__inner {
+  width: min(calc(320px + 27.5px * 2), 100%);
+  padding-inline: 27.5px;
+  margin-inline: auto;
+
+  @include global.mq(sm) {
+    width: min(calc(480px + 25px * 2), 100%);
+  }
+
+  @include global.mq(lg) {
+    width: min(calc(1088px + 20px * 2), 100%);
+    padding-inline: 20px;
+  }
+}
+
+.p-news__main-text {
+  margin-top: 32px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.32px;
+
+  @include global.mq(lg) {
+  }
+}
+
+.p-news__content {
+  margin-top: 24px;
+
+  @include global.mq(lg) {
+    margin-top: 64px;
+  }
+}
+
+.p-news__cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @include global.mq(sm) {
+    row-gap: 32px;
+  }
+
+  @include global.mq(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.p-news-card {
+  display: inline-block;
+  border-radius: 16px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+
+  @include global.mq(lg) {
+    width: calc((320 / 1088) * 100%);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &:focus {
+    outline-offset: 4px;
+  }
+}
+
+.p-news-card__head {
+}
+
+.p-news-card__img {
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+    @include global.mq(sm) {
+      height: 250px;
+    }
+
+    @include global.mq(lg) {
+      height: 200px;
+    }
+  }
+}
+
+.p-news-card__body {
+  padding: 12px 24px 24px;
+  background: global.$color-white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  @include global.mq(sm) {
+    padding: 18px 30px 30px;
+    row-gap: 12px;
+  }
+
+  @include global.mq(lg) {
+    padding: 12px 24px 24px;
+    row-gap: 8px;
+  }
+}
+
+.p-news-card__categories {
+  display: flex;
+  column-gap: 4px;
+}
+
+.p-news-card__category {
+  padding-inline: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.35px;
+  border-radius: 100vmax;
+  background: global.$color-btn-1;
+
+  @include global.mq(lg) {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.35px;
+  }
+}
+
+.p-news-card__text {
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.4px;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; //最大の行数を入れる
+
+  @include global.mq(lg) {
+    font-weight: 400;
+    line-height: 1.75;
+  }
+}
+
+.p-news-card__time {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.35px;
+  text-align: right;
+}
+
+.p-news__archive-link {
+  margin-top: 24px;
+  margin-inline: auto;
+  width: fit-content;
+
+  @include global.mq(lg) {
+    margin-top: 64px;
+  }
+
+  a {
+    display: inline-block;
+    padding: 18px 64px 18px 24px;
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: 0.32px;
+    background: global.$color-btn-1;
+    border-radius: 100vmax;
+    transition: background 0.3s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: global.$color-treat-3;
+
+        span::before {
+          transition: translate 0.4s ease;
+          translate: 50% -50%;
+        }
+      }
+    }
+
+    &:focus {
+      outline-offset: 4px;
+    }
+
+    span {
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.75;
+      letter-spacing: 0.32px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background: url(../img/arrow.png) no-repeat center center/contain;
+        top: 50%;
+        right: -40px;
+        translate: 0 -50%;
+        width: 32px;
+        height: 32px;
+        rotate: -90deg;
+        transition: translate 0.1s ease;
+      }
+    }
+  }
+}

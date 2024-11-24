@@ -1,6 +1,12 @@
 @use "../global" as global;
+
 body {
   font-family: global.$font-ja;
   color: global.$color-black;
   font-size: global.$font-size-base;
+  background: global.$color-light-gray-2;
+}
+
+.yohaku {
+  height: 100vh;
 }

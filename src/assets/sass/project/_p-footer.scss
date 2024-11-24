@@ -1,0 +1,147 @@
+@use "global" as global;
+.p-footer {
+  padding-block: 16px;
+
+  @include global.mq(lg) {
+    padding-block: 40px;
+  }
+}
+
+.p-footer__inner {
+  width: min(calc(335 + 20 * 2), 100%);
+  padding-inline: 20px;
+  margin-inline: auto;
+
+  @include global.mq(lg) {
+    width: min(calc(1312 + 20 * 2), 100%);
+  }
+}
+
+.p-footer__page-links {
+  display: none;
+
+  @include global.mq(lg) {
+    display: block;
+  }
+}
+
+.p-footer__page-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  column-gap: 53.83px;
+  padding-block: 12px;
+  max-width: 1313px;
+  margin-inline: auto;
+  padding-inline: 32px;
+
+  li a {
+    padding-inline: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: 0.32px;
+    position: relative;
+
+    transition: opacity 0.3s ease;
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      translate: 0 -50%;
+      width: 8px;
+      height: auto;
+      aspect-ratio: 1;
+      border-radius: 100%;
+      background: global.$color-treat-4;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+}
+
+.p-footer__content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 8px;
+
+  @include global.mq(lg) {
+    margin-top: 24px;
+    row-gap: 0;
+  }
+}
+
+.p-footer__instagram-link {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  display: inline-block;
+  width: fit-content;
+  margin-inline: auto;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.p-footer__logo {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  display: inline-block;
+  width: fit-content;
+  margin-inline: auto;
+
+  @include global.mq(lg) {
+    padding: 8px;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  img {
+    width: 140px;
+    height: 70px;
+
+    @include global.mq(lg) {
+      width: 210px;
+      height: 105px;
+    }
+  }
+}
+
+.p-footer__copyright {
+  width: 100%;
+  display: block;
+  margin-top: 32px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.67;
+  letter-spacing: 0.24px;
+  color: global.$color-dark-gray;
+  text-align: center;
+
+  @include global.mq(lg) {
+    margin-top: 40px;
+  }
+}

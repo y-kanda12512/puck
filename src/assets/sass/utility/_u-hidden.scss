@@ -1,0 +1,24 @@
+@use "../global" as global;
+.u-sp-hidden {
+  display: none;
+
+  @include global.mq(lg) {
+    display: block;
+  }
+}
+
+.u-pc-hidden {
+  @include global.mq(lg) {
+    display: none;
+  }
+}
+
+.u-sm-hidden {
+  @include global.mq(sm) {
+    display: none;
+  }
+
+  @include global.mq(md) {
+    display: block;
+  }
+}

@@ -1,5 +1,4 @@
 @use "../global" as global;
-
 .p-drawer__icon {
   position: fixed;
   right: 16px;
@@ -7,9 +6,15 @@
   width: 48px;
   padding: 7px 7px 0 7px;
   z-index: map-get(global.$layer, drawer-icon);
+  transition: translate 0.1s ease;
 
   @include global.mq(lg) {
     display: none;
+  }
+
+  &.js-slide-up {
+    transition: translate 0.3s ease;
+    translate: 0 -150%;
   }
 
   &.js-show {
@@ -82,8 +87,9 @@
 }
 
 .p-drawer {
+  display: block;
   position: fixed;
-  top: global.$header-height;
+  top: global.$header-height-sp;
   left: 0;
   width: 100%;
   height: auto;
@@ -91,10 +97,19 @@
   transition: translate 0.3s ease;
   translate: 0 -101%;
   z-index: map-get(global.$layer, drawer-content);
+  background: global.$color-white;
+
+  @include global.mq(lg) {
+    display: none;
+  }
 
   &.js-show {
     translate: 0;
     transition: translate 0.6s ease;
+  }
+
+  &.js-slide-up {
+    translate: 0 -300%;
   }
 }
 
@@ -103,7 +118,7 @@
   flex-direction: column;
   row-gap: 40px;
   width: 100%;
-  height: calc(100vh - global.$header-height);
+  height: calc(100vh - global.$header-height-sp);
   padding: 12px 20px 28px; // 下部余白を戻す
   overflow-y: auto;
 }
@@ -183,6 +198,10 @@
   font-weight: 700;
   line-height: 1;
   border-radius: 100vmax;
+
+  &:focus {
+    outline-offset: 4px;
+  }
 }
 
 .p-drawer__btn-img {

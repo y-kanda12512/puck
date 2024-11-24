@@ -1,0 +1,165 @@
+@use "../global" as global;
+.p-message {
+  padding-top: 48px;
+  padding-bottom: 24px;
+  background: global.$color-white;
+
+  @include global.mq(lg) {
+    padding-top: 55px;
+    padding-bottom: 64px;
+  }
+}
+
+.p-message__inner {
+  width: min(calc(343px + 16px * 2), 100%);
+  padding-inline: 16px;
+  margin-inline: auto;
+
+  @include global.mq(sm) {
+    width: min(calc(500px + 20px * 2), 100%);
+  }
+
+  @include global.mq(md) {
+    width: min(calc(640px + 20px * 2), 100%);
+  }
+
+  @include global.mq(lg) {
+    width: min(calc(1184px + 20px * 2), 100%);
+    padding-inline: 20px;
+  }
+}
+
+.p-message-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 46px;
+  border-radius: 40px;
+  padding: 16px 24px;
+  background: global.$color-light-gray-2;
+
+  @include global.mq(sm) {
+    row-gap: 64px;
+  }
+
+  @include global.mq(lg) {
+    padding: 24px 32px;
+    border-radius: 80px;
+    column-gap: 32px;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+
+  @include global.mq(xl) {
+    column-gap: 64px;
+    padding: 40px 64px;
+  }
+}
+
+.p-message-card__content {
+  position: relative;
+}
+
+.p-message-card__title {
+  text-align: center;
+}
+
+.p-message-card__title-text {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.67;
+  letter-spacing: 0.48px;
+  padding-bottom: 13px;
+  position: relative;
+  padding-top: 8px;
+
+  @include global.mq(lg) {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.57;
+    letter-spacing: 0.56px;
+    padding-bottom: 14.5px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    height: 13.172px;
+    background: url(../img/staff-message-line.png) no-repeat center center/cover;
+
+    @include global.mq(mini) {
+      width: 100%;
+    }
+
+    @include global.mq(md) {
+      width: 400px;
+    }
+  }
+}
+
+.p-message-card__text {
+  margin-top: 24px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.32px;
+
+  @include global.mq(lg) {
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: 0.32px;
+  }
+}
+
+.p-message-card__content-img {
+  position: absolute;
+  width: 104px;
+  height: 99.999px;
+  bottom: -69px;
+  right: -24px;
+
+  @include global.mq(mini) {
+    width: 84px;
+    height: 80px;
+  }
+
+  @include global.mq(sm) {
+    bottom: -89px;
+  }
+
+  @include global.mq(lg) {
+    width: 147px;
+    height: 140px;
+    bottom: -100px;
+    right: 25px;
+  }
+
+  @include global.mq(xl) {
+    width: 187px;
+    right: 25px;
+    bottom: -120px;
+    height: 180px;
+  }
+}
+
+.p-message-card__img {
+  border-radius: 40px;
+  border: 6px solid global.$color-white;
+  overflow: hidden;
+
+  @include global.mq(lg) {
+    flex-shrink: 0;
+    width: 400px;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+
+    @include global.mq(lg) {
+      height: 288px;
+    }
+  }
+}

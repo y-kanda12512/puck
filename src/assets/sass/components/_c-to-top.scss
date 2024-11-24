@@ -1,0 +1,29 @@
+@use "global" as global;
+.c-to-top {
+  position: fixed;
+  right: 2px;
+  bottom: 0;
+  pointer-events: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: map-get(global.$layer, banner-to-top);
+
+  @include global.mq(lg) {
+    right: 4px;
+    bottom: 96px;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &.js-show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: visible;
+  }
+}

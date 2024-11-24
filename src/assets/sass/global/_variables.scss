@@ -26,7 +26,8 @@ $font-en: "Ruda", serif;
 
 $font-size-base: 16px;
 
-$header-height: 86px;
+$header-height-sp: 86px;
+$header-height-pc: 189px;
 
 $breakpoints: (
   mini: "screen and (max-width: 374px)",
@@ -35,11 +36,16 @@ $breakpoints: (
   lg: "screen and (min-width: 900px)",
   xl: "screen and (min-width: 1200px)",
   xxl: "screen and (min-width: 1400px)",
+  xxxl: "screen and (min-width: 1600px)",
 );
 
 $layer: (
   header: 25,
   drawer-content: 20,
   drawer-icon: 30,
+  policy-background-circle: -15,
+  background-img-base: -10,
+  banner-to-top: 15,
+  banner-cancel: 16,
   default: 1,
 );

@@ -1,29 +1,36 @@
 @use "../global" as global;
-
 .p-header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   z-index: map-get(global.$layer, header);
   background: global.$color-white;
+  transition: translate 0.1s ease;
+
+  @include global.mq(lg) {
+    position: static;
+  }
+
+  &.js-slide-up {
+    translate: 0 -100%;
+    transition: translate 0.3s ease;
+  }
 }
 
 .p-header__inner {
   width: 100%;
-  padding-inline: 16px;
+  padding: 8px 24px;
   margin-inline: auto;
-  padding-block: 13.83px;
 
   @include global.mq(sm) {
-    width: 100%;
     padding-inline: 20px;
   }
 
   @include global.mq(lg) {
-    width: min(calc(1310px + 20px * 2), 100%);
+    width: min(calc(1312px + 20px * 2), 100%);
     margin-inline: auto;
-    padding-top: 24.75px;
+    padding-block: 16px 12px;
   }
 }
 
@@ -33,6 +40,15 @@
   align-items: center;
 }
 
+.p-header__logo {
+  transition: opacity 0.3s ease;
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
 .p-header__logo-title {
   display: flex;
   align-items: center;
@@ -40,8 +56,8 @@
 }
 
 .p-header__logo-img {
-  width: 156.579px;
-  height: 58.35px;
+  width: 140px;
+  height: 70px;
   object-fit: contain;
 
   @include global.mq(lg) {
@@ -50,8 +66,8 @@
   }
 
   @include global.mq(xl) {
-    width: 209px;
-    height: 87.5px;
+    width: 210px;
+    height: 105px;
   }
 }
 
@@ -102,6 +118,13 @@
     font-weight: 400;
     line-height: 1.75;
     letter-spacing: 0.32px;
+    transition: opacity 0.3s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
 
     img {
       width: 31px;
@@ -124,9 +147,20 @@
   font-weight: 700;
   line-height: 1;
   border-radius: 100vmax;
+  transition: background 0.3s ease;
 
   @include global.mq(xl) {
     margin-left: 32px;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: global.$color-treat-2;
+    }
+  }
+
+  &:focus {
+    outline-offset: 4px;
   }
 }
 
@@ -141,26 +175,33 @@
 
   @include global.mq(lg) {
     display: block;
-    margin-top: 36px;
+    margin-top: 28px;
   }
 }
 
-.p-header__in-page-links {
-}
-
-.p-header__in-page-link-list {
+.p-header__page-link-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  column-gap: 66.7px;
+  column-gap: 64.5px;
   row-gap: 20px;
 
   li a {
-    padding-inline: 16px;
+    padding-inline: 15.9px;
     position: relative;
     font-weight: 400;
     line-height: 1.75;
     letter-spacing: 0.32px;
+    transition: opacity 0.3s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &:focus {
+    }
 
     &::before,
     &::after {
