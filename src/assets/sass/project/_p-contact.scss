@@ -1,0 +1,156 @@
+@use "global" as global;
+.p-contact {
+  margin-top: 24px;
+
+  @include global.mq(lg) {
+    margin-top: 88px;
+    margin-bottom: 24px;
+  }
+}
+
+.p-contact__inner {
+  width: min(calc(311px + 32px * 2), 100%);
+  padding-inline: 32px;
+  margin-inline: auto;
+
+  @include global.mq(mini) {
+    padding-inline: 20px;
+  }
+
+  @include global.mq(sm) {
+    width: min(calc(500px + 20px * 2), 100%);
+  }
+
+  @include global.mq(md) {
+    width: min(calc(640px + 20px * 2), 100%);
+  }
+
+  @include global.mq(lg) {
+    width: min(calc(1184px + 20px * 2), 100%);
+  }
+}
+
+.p-contact__card {
+  padding: 24px 16px;
+  background: global.$color-white;
+  border-radius: 40px;
+
+  @include global.mq(sm) {
+    padding: 24px 40px;
+  }
+
+  @include global.mq(lg) {
+    padding: 24px 20px;
+  }
+
+  @include global.mq(xl) {
+    padding: 40px 64px;
+  }
+}
+
+.p-contact__main-text {
+  margin-top: 24px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.32px;
+
+  @include global.mq(sm) {
+    margin-top: 32px;
+    text-align: center;
+  }
+
+  @include global.mq(lg) {
+    margin-top: 38px;
+  }
+}
+
+.p-contact__content {
+  margin-top: 23px;
+
+  @include global.mq(lg) {
+    margin-top: 39px;
+  }
+}
+
+.p-contact__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 22px;
+  align-items: center;
+
+  @include global.mq(lg) {
+    flex-direction: row;
+    column-gap: calc((32 / 1024) * 100%);
+  }
+
+  @include global.mq(xl) {
+    column-gap: 32px;
+  }
+}
+
+.p-contact__link {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100vmax;
+  display: flex;
+  padding: 23px;
+  column-gap: 16px;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 279px;
+  transition: background 0.3s ease;
+
+  @include global.mq(lg) {
+    padding: 23px 14px;
+    max-width: 320px;
+    margin-inline: 0;
+  }
+
+  @include global.mq(xl) {
+    padding: 23px;
+  }
+
+  &:focus {
+    outline-offset: 4px;
+  }
+
+  &.--phone {
+    border: 2px solid global.$color-btn-3;
+
+    span {
+      font-family: global.$font-en;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: global.$color-treat-2;
+      }
+    }
+  }
+
+  &.--contact {
+    border: 2px solid global.$color-btn-2;
+
+    span {
+      font-weight: 400;
+      line-height: 1.75;
+      letter-spacing: 0.32px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: global.$color-treat-1;
+      }
+    }
+  }
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}

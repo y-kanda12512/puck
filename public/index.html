@@ -19,12 +19,12 @@
 	<header class="p-header">
 		<div class="p-header__inner">
 			<div class="p-header__upper">
-				<div class="p-header__logo-title">
+				<h1 class="p-header__logo-title">
 					<a href="#" class="p-header__logo">
 						<img class="p-header__logo-img" src="./assets/img/logo.png" alt="ぷっく旗の台ロゴ" />
 					</a>
 					<div class="p-header__title"><span>児童発達支援</span>　<span class="u-inline-block">ぷっく旗の台</span></div>
-				</div>
+				</h1>
 				<nav class="p-header__nav">
 					<ul class="p-header__list">
 						<li>
@@ -46,13 +46,13 @@
 			<!-- p-header__upper -->
 
 			<div class="p-header__bottom">
-				<div class="p-header__in-page-links">
-					<ul class="p-header__in-page-link-list">
+				<div class="p-header__page-links">
+					<ul class="p-header__page-link-list">
 						<li><a href="#about">ぷっくについて</a></li>
 						<li><a href="#program">プログラム内容</a></li>
-						<li><a href="#flow">ご利用までの流れ</a></li>
-						<li><a href="#qa">よくあるご質問</a></li>
-						<li><a href="#blog">おしらせ</a></li>
+						<li><a href="#usage-flow">ご利用までの流れ</a></li>
+						<li><a href="#q-a">よくあるご質問</a></li>
+						<li><a href="#news">おしらせ</a></li>
 						<li><a href="#access">アクセス</a></li>
 						<li><a href="#contact">お問い合わせ</a></li>
 					</ul>
@@ -79,13 +79,13 @@
 	<div class="p-drawer">
 		<div class="p-drawer__body">
 			<ul class="p-drawer__list">
-				<li><a href="">ぷっくについて</a></li>
-				<li><a href="">プログラム内容</a></li>
-				<li><a href="">ご利用までの流れ</a></li>
-				<li><a href="">よくあるご質問</a></li>
-				<li><a href="">おしらせ</a></li>
-				<li><a href="">アクセス</a></li>
-				<li><a href="">お問い合わせ</a></li>
+				<li><a href="#about">ぷっくについて</a></li>
+				<li><a href="#program">プログラム内容</a></li>
+				<li><a href="#usage-flow">ご利用までの流れ</a></li>
+				<li><a href="#q-a">よくあるご質問</a></li>
+				<li><a href="#news">おしらせ</a></li>
+				<li><a href="#access">アクセス</a></li>
+				<li><a href="#contact">お問い合わせ</a></li>
 			</ul>
 			<div class="p-drawer__page-links">
 				<a href="recruit">
@@ -97,7 +97,7 @@
 					評価アンケート
 				</a>
 			</div>
-			<a href="" class="p-drawer__btn">
+			<a href="tel:03-6426-9900" class="p-drawer__btn">
 				<img class="p-drawer__btn-img" src="./assets/img/phpne-black.png" alt="受話器の画像" loading="local" />
 				03-6426-9900
 			</a>
@@ -106,940 +106,1019 @@
 	</div>
 	<!-- p-drawer -->
 
-	<div class="p-fv">
-		<div class="p-fv__inner">
-			<div class="p-fv__text-balloon-wrap">
-				<div class="p-fv__text-balloon">
-					<picture>
-						<source media="(min-width: 900px)" srcset="./assets/img/pc/fv-balloon-1.png" />
-						<img class="p-fv__text-balloon-img" src="./assets/img/fv-balloon-1.png" alt="だいすき！" />
-					</picture>
-				</div>
-				<div class="p-fv__text-balloon">
-					<picture>
-						<source media="(min-width: 900px)" srcset="./assets/img/pc/fv-balloon-2.png" />
-						<img class="p-fv__text-balloon-img" src="./assets/img/fv-balloon-2.png" alt="たのしい！" />
-					</picture>
-				</div>
-				<div class="p-fv__text-balloon">
-					<picture>
-						<source media="(min-width: 900px)" srcset="./assets/img/pc/fv-balloon-3.png" />
-						<img class="p-fv__text-balloon-img" src="./assets/img/fv-balloon-3.png" alt="できた！" />
-					</picture>
-				</div>
-			</div>
-			<div class="p-fv__text-wrap">
-				<p class="p-fv__text-top">を大切にします。</p>
-				<p class="p-fv__text-under">小さな人から大きな人まで、さまざまな人が楽しく暮らせる世の中を目指します。</p>
-			</div>
-			<picture class="p-fv__main-img">
-				<source media="(min-width: 768px)" srcset="./assets/img/pc/fv-img.png" />
-				<img src="./assets/img/fv-img.png" alt="クレヨンで絵を描いている画像" />
-			</picture>
-			<!-- p-fv__main-img -->
-		</div>
-		<!-- p-fv__inner -->
-	</div>
-	<!-- p-fv -->
-
-	<section class="p-about">
-		<div class="p-about__inner l-inner">
-			<div class="p-about__card">
-				<div class="p-about__flex-wrap">
-					<div class="p-about__card__content">
-						<h2 class="c-heading-title">
-							<span class="c-heading-title__text">ぷっくについて</span>
-							<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
-						</h2>
-
-						<p class="p-about__text">
-							私たち「ぷっく」は、発達に気がかりのあるお子様が、保護者様とよりよくハッピーに生きるためのお手伝いをしたいとの思いからスタートしました。<br />
-							家庭だけでなく、通院先やお住まいの地域など、お子様を取り巻く様々な環境でみんなが楽しく生活できる方法を提案します。
-						</p>
-					</div>
-					<div class="p-about__img">
-						<picture class="">
-							<source media="(min-width: 900px)" srcset="./assets/img/pc/about.png" />
-							<img src="./assets/img/about.png" alt="積み木の画像" />
+	<main>
+		<div id="fv" class="p-fv">
+			<div class="p-fv__inner">
+				<div class="p-fv__text-balloon-wrap">
+					<div class="p-fv__text-balloon">
+						<picture>
+							<source media="(min-width: 900px)" srcset="./assets/img/pc/fv-balloon-1.png" />
+							<img class="p-fv__text-balloon-img" src="./assets/img/fv-balloon-1.png" alt="だいすき！" />
 						</picture>
 					</div>
-					<!-- p-about__img -->
+					<div class="p-fv__text-balloon">
+						<picture>
+							<source media="(min-width: 900px)" srcset="./assets/img/pc/fv-balloon-2.png" />
+							<img class="p-fv__text-balloon-img" src="./assets/img/fv-balloon-2.png" alt="たのしい！" />
+						</picture>
+					</div>
+					<div class="p-fv__text-balloon">
+						<picture>
+							<source media="(min-width: 900px)" srcset="./assets/img/pc/fv-balloon-3.png" />
+							<img class="p-fv__text-balloon-img" src="./assets/img/fv-balloon-3.png" alt="できた！" />
+						</picture>
+					</div>
 				</div>
-				<!-- p-about__flex-wrap -->
+				<div class="p-fv__text-wrap">
+					<p class="p-fv__text-top">を大切にします。</p>
+					<p class="p-fv__text-under">小さな人から大きな人まで、さまざまな人が楽しく暮らせる世の中を目指します。</p>
+				</div>
+				<picture class="p-fv__main-img">
+					<source media="(min-width: 768px)" srcset="./assets/img/pc/fv-img.png" />
+					<img src="./assets/img/fv-img.png" alt="クレヨンで絵を描いている画像" />
+				</picture>
+				<!-- p-fv__main-img -->
 			</div>
-			<!-- p-about__card -->
+			<!-- p-fv__inner -->
 		</div>
-		<!-- p-about__inner l-inner -->
-	</section>
+		<!-- p-fv -->
 
-	<section class="p-features">
-		<div class="p-features__inner">
-			<div class="p-features__card">
-				<h2 class="c-heading-title">
-					<span class="c-heading-title__text">ぷっくの特徴</span>
-					<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
-				</h2>
-				<p class="p-features__text">私たち「ぷっく」は受容と交流の精神を軸に、様々なメソッドを使って発達障害のお子様の療育を行います。</p>
-				<div class="p-features__steps">
-					<div class="p-features__step p-step">
-						<div class="p-step__head">
-							<p class="p-step__head-text">STEP</p>
-							<p class="p-step__head-number">01</p>
-						</div>
-						<!-- p-step__head -->
-						<div class="p-step__body">
-							<p class="p-step__body-text">安心できるあたたかい<br class="u-pc-hidden" />人間関係を育む</p>
-						</div>
-						<!-- p-step__body -->
-					</div>
-					<!-- p-features__step p-step -->
-					<div class="p-features__step p-step">
-						<div class="p-step__head">
-							<p class="p-step__head-text">STEP</p>
-							<p class="p-step__head-number">02</p>
-						</div>
-						<!-- p-step__head -->
-						<div class="p-step__body">
-							<p class="p-step__body-text">長所を伸ばしつつ、<br class="u-pc-hidden" />人を頼りにしながら<br class="u-sp-hidden" />一緒に<br class="u-pc-hidden" />課題を乗り越える経験を積む</p>
-						</div>
-						<!-- p-step__body -->
-					</div>
-					<!-- p-features__step p-step -->
-					<div class="p-features__step p-step">
-						<div class="p-step__head">
-							<p class="p-step__head-text">STEP</p>
-							<p class="p-step__head-number">03</p>
-						</div>
-						<!-- p-step__head -->
-						<div class="p-step__body">
-							<p class="p-step__body-text">手ごたえや達成感によって<br class="u-pc-hidden" />自尊心を育て、<br class="u-sp-hidden" />苦手なことにも<br class="u-pc-hidden" />挑戦する気持ちをもつ</p>
-						</div>
-						<!-- p-step__body -->
-					</div>
-					<!-- p-features__step p-step -->
-				</div>
-				<!-- p-features__steps -->
-			</div>
-			<!-- p-features__card -->
-		</div>
-		<!-- p-features__inner -->
-	</section>
+		<section id="about" class="p-about">
+			<div class="p-about__inner l-inner">
+				<div class="p-about__card">
+					<div class="p-about__flex-wrap">
+						<div class="p-about__card__content">
+							<h2 class="c-heading-title">
+								<span class="c-heading-title__text">ぷっくについて</span>
+								<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
+							</h2>
 
-	<section class="p-policy">
-		<div class="p-policy__wrap">
-			<div class="p-policy__inner">
-				<h2 class="c-heading-title">
-					<span class="c-heading-title__text">療育方針</span>
-					<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
-				</h2>
-				<div class="p-policy__text-wrap">
-					<p class="p-policy__text-main">【5領域支援】</p>
-					<p class="p-policy__text-sub">
-						ぷっくでは、児童発達支援の5領域に基づき療育を行っています。<br />
-						「苦手なところを治す」よりも、ひとりひとりの特性や発達段階に合わせたより効果的な支援に努めています。<br />
-						「苦手の克服」は後期の取り組みと考えております。
-					</p>
-				</div>
-				<div class="p-policy__boxes">
-					<div class="p-policy__box">
-						<h3 class="p-policy__box-title">健康生活</h3>
-						<div class="p-policy__box-img">
-							<picture>
-								<source media="(min-width: 900px)" srcset="./assets/img/pc/policy-1.png" />
-								<img src="./assets/img/policy-1.png" alt="ハートの画像" />
-							</picture>
-						</div>
-					</div>
-
-					<div class="p-policy__box">
-						<h3 class="p-policy__box-title">運動感覚</h3>
-						<div class="p-policy__box-img">
-							<picture>
-								<source media="(min-width: 900px)" srcset="./assets/img/pc/policy-2.png" />
-								<img src="./assets/img/policy-2.png" alt="バスケットボールの画像" />
-							</picture>
-						</div>
-					</div>
-
-					<div class="p-policy__box">
-						<h3 class="p-policy__box-title">認知行動</h3>
-						<div class="p-policy__box-img">
-							<picture>
-								<source media="(min-width: 900px)" srcset="./assets/img/pc/policy-3.png" />
-								<img src="./assets/img/policy-3.png" alt="人の頭の画像" />
-							</picture>
-						</div>
-					</div>
-
-					<div class="p-policy__box">
-						<h3 class="p-policy__box-title">
-							言語<br />
-							コミュニケーション
-						</h3>
-						<div class="p-policy__box-img">
-							<picture>
-								<source media="(min-width: 900px)" srcset="./assets/img/pc/policy-4.png" />
-								<img src="./assets/img/policy-4.png" alt="吹き出しの画像" />
-							</picture>
-						</div>
-					</div>
-
-					<div class="p-policy__box">
-						<h3 class="p-policy__box-title">
-							人間関係<br />
-							社会性
-						</h3>
-						<div class="p-policy__box-img">
-							<picture>
-								<source media="(min-width: 900px)" srcset="./assets/img/pc/policy-5.png" />
-								<img src="./assets/img/policy-5.png" alt="複数人の画像" />
-							</picture>
-						</div>
-						<!-- p-policy__box-img -->
-					</div>
-					<!-- p-policy__box -->
-				</div>
-				<!-- p-policy__boxes -->
-			</div>
-			<!-- p-policy__inner -->
-		</div>
-		<!-- p-policy__wrap -->
-
-		<img class="p-policy__balloon-img" src="./assets/img/balloon.png" alt="風船の画像" />
-		<img class="p-policy__balloon-img" src="./assets/img/balloon.png" alt="風船の画像" />
-	</section>
-
-	<section class="p-program">
-		<div class="p-program__inner">
-			<div class="p-program__sp-img">
-				<img src="./assets/img/program-1.png" alt="積み木をしている子供の画像" />
-			</div>
-			<div class="p-program__sp-img">
-				<img src="./assets/img/program-2.png" alt="ブロック遊びをしている子供の画像" />
-			</div>
-			<div class="p-program__sp-img">
-				<img src="./assets/img/program-3.png" alt="積み木をしている子供の画像" />
-			</div>
-			<div class="p-program__sp-img">
-				<img src="./assets/img/program-4.png" alt="棚の画像" />
-			</div>
-			<h2 class="c-heading-title">
-				<span class="c-heading-title__text">プログラム内容</span>
-				<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
-			</h2>
-			<p class="p-program__text">
-				ぷっくは、お子様への療育だけでなく、保護者のサポート、さらに地域の方との連携も大事にしていきます。<br />
-				療育プログラムだけでなく、保護者対象の研究会、地域交流会イベントも開催致しますので、ぜひ積極的にご参加ください。
-			</p>
-			<div class="p-program__boxes">
-				<div class="p-program__box">
-					<div class="p-program__box-wrap">
-						<div class="p-program__box-pc-img">
-							<img src="./assets/img/music.png" alt="音符の画像" />
-						</div>
-						<div class="p-program__box-content-wrap">
-							<div class="p-program__box-head">
-								<img class="p-program__box-img" src="./assets/img/music.png" alt="音符の画像" />
-								<h3 class="p-program__box-title">音楽療法</h3>
-							</div>
-							<div class="p-program__box-body">
-								<p class="p-program__box-text">月替わりの歌を伴奏に合わせて歌います。月日の流れや、季節のイベントなどもおおまかに意識できることを目指しています。また、鈴などの音が出る楽器を自ら奏で、リズムを感じ取ることや、職員のまねを楽しみます。わらべうたや手あそびでは、お友だちとのふれあいで仲間意識を持ち、手指や体を動かすことで思考と運動の連動を促します。</p>
-							</div>
-							<!-- p-program__box-body -->
-						</div>
-						<!-- p-program__box-content-wrap -->
-					</div>
-					<!-- p-program__box-wrap -->
-				</div>
-				<!-- p-program__box -->
-
-				<div class="p-program__box">
-					<div class="p-program__box-wrap">
-						<div class="p-program__box-pc-img">
-							<img src="./assets/img/exercise.png" alt="バスケットボールの画像" />
-						</div>
-						<div class="p-program__box-content-wrap">
-							<div class="p-program__box-head">
-								<img class="p-program__box-img" src="./assets/img/exercise.png" alt="バスケットボールの画像" />
-								<h3 class="p-program__box-title">運動療法</h3>
-							</div>
-							<div class="p-program__box-body">
-								<p class="p-program__box-text">身体を大きく動かす粗大運動をメインに取り組みます。季節ごとの音楽に合わせて、比較的難しくないダンスを楽しみます。また、走る、跳ぶ、押す、引く、投げるなど、四肢を動かしながら、バランス感覚や協調運動を連動させたり、力の加減をコントロールする力を養います。</p>
-							</div>
-							<!-- p-program__box-body -->
-						</div>
-						<!-- p-program__box-content-wrap -->
-					</div>
-					<!-- p-program__box-wrap -->
-				</div>
-				<!-- p-program__box -->
-
-				<div class="p-program__box">
-					<div class="p-program__box-wrap">
-						<div class="p-program__box-pc-img">
-							<img src="./assets/img//relaxation.png" alt="カップの画像" />
-						</div>
-						<div class="p-program__box-content-wrap">
-							<div class="p-program__box-head">
-								<img class="p-program__box-img" src="./assets/img//relaxation.png" alt="カップの画像" />
-								<h3 class="p-program__box-title">リラクゼーション</h3>
-							</div>
-							<div class="p-program__box-body">
-								<p class="p-program__box-text">ぷっくでは「スヌーズレン」を取り入れています。聴覚、視覚、嗅覚、触覚の感覚刺激空間の中で、心身リラックスを図ります。五感のうち4つの感覚を刺激して、心地よさに身を委ねます。運動療育の後にこのプログラムを設定することで、より休息の時間を味わうことができます</p>
-							</div>
-							<!-- p-program__box-body -->
-						</div>
-						<!-- p-program__box-content-wrap -->
-					</div>
-					<!-- p-program__box-wrap -->
-				</div>
-				<!-- p-program__box -->
-
-				<div class="p-program__box">
-					<div class="p-program__box-wrap">
-						<div class="p-program__box-pc-img">
-							<img src="./assets/img/exchange.png" alt="複数人の画像" />
-						</div>
-						<div class="p-program__box-content-wrap">
-							<div class="p-program__box-head">
-								<img class="p-program__box-img" src="./assets/img/exchange.png" alt="複数人の画像" />
-								<h3 class="p-program__box-title">課題交流</h3>
-							</div>
-							<div class="p-program__box-body">
-								<p class="p-program__box-text">多くは机上での活動となります。自分の椅子に座るところからはじまり、それぞれの成長や特性に合わせた課題を提供しています。週替わりで、文字や数字に触れたり、はさみやのりを使った製作活動も行います。あそびをとおして、指先を使った微細運動の発達を促していきます。お店やさんなどのごっこあそびや、自分で作る米粉粘土あそび、フィンガーペイントなども人気のプログラムです。</p>
-							</div>
-							<!-- p-program__box-body -->
-						</div>
-						<!-- p-program__box-content-wrap -->
-					</div>
-					<!-- p-program__box-wrap -->
-				</div>
-				<!-- p-program__box -->
-
-				<div class="p-program__box">
-					<div class="p-program__box-wrap">
-						<div class="p-program__box-pc-img">
-							<img src="./assets/img/reading-aloud.png" alt="本を読んでいる人の画像" />
-						</div>
-						<div class="p-program__box-content-wrap">
-							<div class="p-program__box-head">
-								<img class="p-program__box-img" src="./assets/img/reading-aloud.png" alt="本を読んでいる人の画像" />
-								<h3 class="p-program__box-title">読み聞かせ</h3>
-							</div>
-							<div class="p-program__box-body">
-								<p class="p-program__box-text">1日の活動の終わりに向けて、絵本の読み聞かせの時間を設けています。椅子に座り、落ち着いた時間を目指します。目で見て、耳で聞いて、思考力や想像力を育みます。豊かな言葉や表現を身につけ、絵本の世界をお友だちと共有します。</p>
-							</div>
-							<!-- p-program__box-body -->
-						</div>
-						<!-- p-program__box-content-wrap -->
-					</div>
-					<!-- p-program__box-wrap -->
-				</div>
-				<!-- p-program__box -->
-
-				<div class="p-program__box">
-					<div class="p-program__box-wrap">
-						<div class="p-program__box-pc-img">
-							<img src="./assets/img/feed-back.png" alt="吹き出しの画像" />
-						</div>
-						<div class="p-program__box-content-wrap">
-							<div class="p-program__box-head">
-								<img class="p-program__box-img" src="./assets/img/feed-back.png" alt="吹き出しの画像" />
-								<h3 class="p-program__box-title">フィードバック</h3>
-							</div>
-							<div class="p-program__box-body">
-								<p class="p-program__box-text">担当職員が、保護者への活動報告を行います。運動療育や課題交流でのお子様の様子や、プログラムの目的などをお伝えしています。</p>
-							</div>
-							<!-- p-program__box-body -->
-						</div>
-						<!-- p-program__box-content-wrap -->
-					</div>
-					<!-- p-program__box-wrap -->
-				</div>
-				<!-- p-program__box -->
-
-				<div class="p-program__box">
-					<div class="p-program__box-wrap">
-						<div class="p-program__box-pc-img">
-							<img src="./assets/img/discussion.png" alt="複数人で話している画像" />
-						</div>
-						<div class="p-program__box-content-wrap">
-							<div class="p-program__box-head">
-								<img class="p-program__box-img" src="./assets/img/discussion.png" alt="複数人で話している画像" />
-								<h3 class="p-program__box-title">おはなしあい</h3>
-							</div>
-							<div class="p-program__box-body">
-								<p class="p-program__box-text">ぷっくでは、保護者と月に1～2回、個別面談・グループ面談の時間を設けております。ご自宅や園でのお子様の様子や、困りごとだけでなく、できるようになったことなどもお話いいだける機会を設けています。今後の目標を伺ったり、小学校へ向けての準備などを共有し、日常生活へ活かせるアドバイスも行っています。</p>
-							</div>
-							<!-- p-program__box-body -->
-						</div>
-						<!-- p-program__box-content-wrap -->
-					</div>
-					<!-- p-program__box-wrap -->
-				</div>
-				<!-- p-program__box -->
-			</div>
-			<!-- p-program__boxes -->
-
-			<div class="p-program__gallery">
-				<div class="p-program__gallery-img">
-					<img src="./assets/img/program-1.png" alt="積み木をしている子供の画像" />
-				</div>
-				<div class="p-program__gallery-img">
-					<img src="./assets/img/program-2.png" alt="ブロック遊びをしている子供の画像" />
-				</div>
-				<div class="p-program__gallery-img">
-					<img src="./assets/img/program-3.png" alt="積み木をしている子供の画像" />
-				</div>
-				<div class="p-program__gallery-img">
-					<img src="./assets/img/program-4.png" alt="棚の画像" />
-				</div>
-			</div>
-			<!-- p-program__gallery -->
-		</div>
-		<!-- p-program__inner -->
-	</section>
-
-	<section class="p-day-flow">
-		<img class="p-day-flow__cloud" src="./assets/img/cloud.png" alt="雲の画像" />
-		<img class="p-day-flow__cloud" src="./assets/img/cloud.png" alt="雲の画像" />
-		<img class="p-day-flow__cloud" src="./assets/img/cloud.png" alt="雲の画像" />
-		<img class="p-day-flow__cloud" src="./assets/img/cloud.png" alt="雲の画像" />
-		<img class="p-day-flow__cloud" src="./assets/img/cloud.png" alt="雲の画像" />
-		<div class="p-day-flow__wrap">
-			<div class="p-day-flow__inner">
-				<h2 class="c-heading-title">
-					<span class="c-heading-title__text">一日の流れ</span>
-					<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
-				</h2>
-				<div class="p-day-flow__cards">
-					<div class="p-day-flow__cards-am-pm">
-						<div class="p-day-flow__card p-day-flow-card">
-							<img class="p-day-flow-card__img --first" src="./assets/img/bird-1.png" alt="青い鳥の画像" />
-							<div class="p-day-flow-card-wrap">
-								<h3 class="p-day-flow-card__head --border-green">午前クラス</h3>
-								<div class="p-day-flow-card__body">
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">10:00</p>
-										<p class="p-day-flow-card__program-text">準備・はじめの会</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">10:15</p>
-										<p class="p-day-flow-card__program-text">音楽療育</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">10:30</p>
-										<p class="p-day-flow-card__program-text">運動療育</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">10:45</p>
-										<p class="p-day-flow-card__program-text">水分補給・リラクゼーション</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">11:00</p>
-										<p class="p-day-flow-card__program-text">課題交流</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">11:10</p>
-										<p class="p-day-flow-card__program-text">絵カード・絵本</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">11:15</p>
-										<p class="p-day-flow-card__program-text">おわりの会・帰りの準備</p>
-									</div>
-									<!-- p-day-flow-card__program -->
-								</div>
-								<!-- p-day-flow-card__body -->
-							</div>
-							<!-- p-day-flow-card-wrap -->
-						</div>
-						<!-- p-day-flow__card p-day-flow-card -->
-
-						<div class="p-day-flow__card p-day-flow-card">
-							<img class="p-day-flow-card__img --second" src="./assets/img/bird-2.png" alt="黄色い鳥の画像" />
-							<div class="p-day-flow-card-wrap">
-								<h3 class="p-day-flow-card__head --border-green">午後クラス</h3>
-								<div class="p-day-flow-card__body">
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">15:00</p>
-										<p class="p-day-flow-card__program-text">準備・はじめの会</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">15:15</p>
-										<p class="p-day-flow-card__program-text">音楽療育</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">15:30</p>
-										<p class="p-day-flow-card__program-text">運動療育</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">15:45</p>
-										<p class="p-day-flow-card__program-text">水分補給・リラクゼーション</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">16:00</p>
-										<p class="p-day-flow-card__program-text">課題交流</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">16:10</p>
-										<p class="p-day-flow-card__program-text">絵カード・絵本</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">16:15</p>
-										<p class="p-day-flow-card__program-text">おわりの会・帰りの準備</p>
-									</div>
-									<!-- p-day-flow-card__program -->
-								</div>
-								<!-- p-day-flow-card__body -->
-							</div>
-							<!-- p-day-flow-card-wrap -->
-						</div>
-						<!-- p-day-flow__card p-day-flow-card -->
-					</div>
-					<!-- p-day-flow__cards-am-pm -->
-
-					<div class="p-day-flow__individual-class">
-						<div class="p-day-flow__card p-day-flow-card">
-							<div class="p-day-flow-card-wrap">
-								<h3 class="p-day-flow-card__head --border-pink">個別クラス</h3>
-								<div class="p-day-flow-card__body">
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">13:15</p>
-										<p class="p-day-flow-card__program-text">音楽療育</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">13:30</p>
-										<p class="p-day-flow-card__program-text">運動療育</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">13:45</p>
-										<p class="p-day-flow-card__program-text">水分補給・リラクゼーション</p>
-									</div>
-									<div class="p-day-flow-card__program">
-										<p class="p-day-flow-card__program__time">13:55</p>
-										<p class="p-day-flow-card__program-text">絵カード・絵本</p>
-									</div>
-									<!-- p-day-flow-card__program -->
-								</div>
-								<!-- p-day-flow-card__body -->
-							</div>
-							<!-- p-day-flow-card-wrap -->
-
-							<div class="p-day-flow__detail-pc">
-								<p class="p-day-flow__detail-text">
-									ぷっくでは、小集団療育を基本に療育を進めていきます。<br />
-									個別の課題がある場合や、必要があると判断された場合に、月1回程度、個別療育（50分～）を行い、経験を積み重ねます。<br />
-									日程や内容は、保護者様と相談のうえ決めております。
-								</p>
-								<img src="./assets/img/children-1.png" alt="公園で遊んでいる子ども" />
-							</div>
-							<!-- p-day-flow__detail --pc -->
-						</div>
-						<!-- p-day-flow__individual-class -->
-					</div>
-					<!-- p-day-flow__card p-day-flow-card -->
-				</div>
-				<!-- p-day-flow__cards -->
-
-				<div class="p-day-flow__detail-sp">
-					<p class="p-day-flow__detail-text">
-						ぷっくでは、小集団療育を基本に療育を進めていきます。<br />
-						個別の課題がある場合や、必要があると判断された場合に、月1回程度、個別療育（50分～）を行い、経験を積み重ねます。<br />
-						日程や内容は、保護者様と相談のうえ決めております。
-					</p>
-					<img src="./assets/img/children-1.png" alt="公園で遊んでいる子ども" />
-				</div>
-				<!-- p-day-flow__detail --sp -->
-			</div>
-			<!-- p-day-flow__inner -->
-		</div>
-	</section>
-
-	<section class="p-usage-flow">
-		<div class="p-usage-flow__inner">
-			<h2 class="c-heading-title">
-				<span class="c-heading-title__text">ご利用までの流れ</span>
-				<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
-			</h2>
-
-			<p class="p-usage-flow__main-text">
-				小学校入学前で発達支援に気がかりのあるお子様（重症心身障害児を除く）がご利用できます。<br />
-				お住まいの区や市の発行する受給者証が必要となります。<br />
-				児童福祉法に基づく「児童発達支援事業」ですので、自己負担額は一割です。更に所得に応じた上限があります。
-			</p>
-
-			<div class="p-usage-flow__boxes">
-				<div class="p-usage-flow__box p-usage-flow-box">
-					<h3 class="p-usage-flow-box__head">
-						<span class="p-usage-flow-box__head-number">1</span>
-						<span class="p-usage-flow-box__head-text">お問い合わせ</span>
-					</h3>
-					<div class="p-usage-flow-box__body">
-						<p class="p-usage-flow-box__body-text">ご利用を検討されている方は、電話、メールでお問い合わせください</p>
-					</div>
-					<!-- p-usage-flow-box__body -->
-				</div>
-				<!-- p-usage-flow__box p-usage-flow-box -->
-
-				<div class="p-usage-flow__box p-usage-flow-box">
-					<h3 class="p-usage-flow-box__head">
-						<span class="p-usage-flow-box__head-number">2</span>
-						<span class="p-usage-flow-box__head-text">ご相談・体験</span>
-					</h3>
-					<div class="p-usage-flow-box__body">
-						<p class="p-usage-flow-box__body-text">教室に体験及びご相談にきていただきます</p>
-					</div>
-					<!-- p-usage-flow-box__body -->
-				</div>
-				<!-- p-usage-flow__box p-usage-flow-box -->
-
-				<div class="p-usage-flow__box p-usage-flow-box">
-					<h3 class="p-usage-flow-box__head">
-						<span class="p-usage-flow-box__head-number">3</span>
-						<span class="p-usage-flow-box__head-text">受給者証申請</span>
-					</h3>
-					<div class="p-usage-flow-box__body">
-						<p class="p-usage-flow-box__body-text">お住まいの区役所または市役所で申請手続きをお願いいたします</p>
-					</div>
-					<!-- p-usage-flow-box__body -->
-				</div>
-				<!-- p-usage-flow__box p-usage-flow-box -->
-
-				<div class="p-usage-flow__box p-usage-flow-box">
-					<h3 class="p-usage-flow-box__head">
-						<span class="p-usage-flow-box__head-number">4</span>
-						<span class="p-usage-flow-box__head-text">受給者証交付</span>
-					</h3>
-					<div class="p-usage-flow-box__body">
-						<p class="p-usage-flow-box__body-text">申請後2～4週間程度で受給者証が交付されますので、交付されたらご連絡ください</p>
-					</div>
-					<!-- p-usage-flow-box__body -->
-				</div>
-				<!-- p-usage-flow__box p-usage-flow-box -->
-
-				<div class="p-usage-flow__box p-usage-flow-box">
-					<h3 class="p-usage-flow-box__head">
-						<span class="p-usage-flow-box__head-number">5</span>
-						<span class="p-usage-flow-box__head-text">ご利用開始</span>
-					</h3>
-					<div class="p-usage-flow-box__body">
-						<p class="p-usage-flow-box__body-text">ぷっくのご利用スタート！</p>
-					</div>
-					<!-- p-usage-flow-box__body -->
-				</div>
-				<!-- p-usage-flow__box p-usage-flow-box -->
-			</div>
-			<!-- p-usage-flow__boxes -->
-		</div>
-		<!-- p-usage-flow__inner -->
-	</section>
-
-	<section class="p-message">
-		<div class="p-message__inner">
-			<div class="p-message__card p-message-card">
-				<div class="p-message-card__content">
-					<h2 class="p-message-card__title">
-						<span class="p-message-card__title-text">スタッフからの<span class="u-inline-block">メッセージ</span></span>
-					</h2>
-					<p class="p-message-card__text">
-						「できないこと」よりもまずは「できること」に注目して長所を伸ばし、その子らしく、いきいきとした生活を送ることが一番大事だと考えます。<br />
-						我々スタッフは専門的な知識と技術で療育を行い、お子様へのアプローチだけでなく、保護者へのフィードバックやアドバイスを通じ、お子様の伸びる力を支援します。
-					</p>
-					<img class="p-message-card__content-img" src="./assets/img/pens.png" alt="クレヨンの画像" />
-				</div>
-				<div class="p-message-card__img">
-					<img src="./assets/img/staff-img.png" alt="スタッフの写真" />
-				</div>
-				<!-- p-message-card__img -->
-			</div>
-			<!-- p-message__card p-message-card -->
-		</div>
-		<!-- p-message__inner -->
-	</section>
-
-	<section class="p-q-a">
-		<div class="p-q-a__wrap">
-			<div class="p-q-a__inner">
-				<h2 class="c-heading-title">
-					<span class="c-heading-title__text">よくあるご質問</span>
-					<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
-				</h2>
-				<div class="p-q-a__boxes">
-					<div class="p-q-a__box p-q-a-box">
-						<div class="p-q-a-box__head">
-							<div class="p-q-a-box__head-img">
-								<img src="./assets/img/question-icon.png" alt="Qの文字画像" />
-							</div>
-							<p class="p-q-a-box__head-text">利用料はいくらですか</p>
-						</div>
-						<div class="p-q-a-box__body">
-							<p class="p-q-a-box__body-text">
-								ぷっくは児童発達支援事業のため、児童福祉法に基づき、満3歳を迎えた4月1日より小学校入学前までは、無償化対象事業の施設です。また、東京都の政策により、第2子以降の0～2歳のお子様は、世帯収入に関わらず無償化の対象となっております。<br />
-								0～2歳の第1子のご利用料は、国や自治体が9割を負担し、1割を保護者に負担していただくこととなり、その上限は37,200円です。
+							<p class="p-about__text">
+								私たち「ぷっく」は、発達に気がかりのあるお子様が、保護者様とよりよくハッピーに生きるためのお手伝いをしたいとの思いからスタートしました。<br />
+								家庭だけでなく、通院先やお住まいの地域など、お子様を取り巻く様々な環境でみんなが楽しく生活できる方法を提案します。
 							</p>
 						</div>
-						<!-- p-q-a-box__body -->
+						<div class="p-about__img">
+							<picture class="">
+								<source media="(min-width: 900px)" srcset="./assets/img/pc/about.png" />
+								<img src="./assets/img/about.png" alt="積み木の画像" />
+							</picture>
+						</div>
+						<!-- p-about__img -->
 					</div>
-					<!-- p-q-a__box p-q-a-box -->
-
-					<div class="p-q-a__box p-q-a-box">
-						<div class="p-q-a-box__head">
-							<div class="p-q-a-box__head-img">
-								<img src="./assets/img/question-icon.png" alt="Qの文字画像" />
-							</div>
-							<p class="p-q-a-box__head-text">どんな子が通っていますか</p>
-						</div>
-						<div class="p-q-a-box__body">
-							<p class="p-q-a-box__body-text">保育園、幼稚園、療育センターなどに在籍しながらぷっくに通われているお子様や、家庭保育のお子様などさまざまです。</p>
-						</div>
-						<!-- p-q-a-box__body -->
-					</div>
-					<!-- p-q-a__box p-q-a-box -->
-
-					<div class="p-q-a__box p-q-a-box">
-						<div class="p-q-a-box__head">
-							<div class="p-q-a-box__head-img">
-								<img src="./assets/img/question-icon.png" alt="Qの文字画像" />
-							</div>
-							<p class="p-q-a-box__head-text">母子分離ができていなくても大丈夫ですか</p>
-						</div>
-						<div class="p-q-a-box__body">
-							<p class="p-q-a-box__body-text">親子教室ではないため基本的には母子分離のプログラムを組んでおりますが、お子様の年齢や不安、体調などに寄り添い、適宜様子を見ながら母子分離を進めていきますので、ご安心ください。</p>
-						</div>
-						<!-- p-q-a-box__body -->
-					</div>
-					<!-- p-q-a__box p-q-a-box -->
-
-					<div class="p-q-a__box p-q-a-box">
-						<div class="p-q-a-box__head">
-							<div class="p-q-a-box__head-img">
-								<img src="./assets/img/question-icon.png" alt="Qの文字画像" />
-							</div>
-							<p class="p-q-a-box__head-text">送迎はありますか</p>
-						</div>
-						<div class="p-q-a-box__body">
-							<p class="p-q-a-box__body-text">基本的には、保護者様の送り迎えで通っていただく教室です。事前の申し出により、祖父母や地域のファミリーサポート制度での送迎で通われているお子様もいらっしゃいますので、共働き世帯などでもご活用いただければと思います。</p>
-						</div>
-						<!-- p-q-a-box__body -->
-					</div>
-					<!-- p-q-a__box p-q-a-box -->
-
-					<div class="p-q-a__box p-q-a-box">
-						<div class="p-q-a-box__head">
-							<div class="p-q-a-box__head-img">
-								<img src="./assets/img/question-icon.png" alt="Qの文字画像" />
-							</div>
-							<p class="p-q-a-box__head-text">なぜ集団療育なのですか</p>
-						</div>
-						<div class="p-q-a-box__body">
-							<p class="p-q-a-box__body-text">ぷっくの集団療育は小集団（2～6名）のため、園生活のような規模ではございません。園生活に慣れる体験や、園生活での困りごとなどを、より小さい規模の小集団で解決していく力を育むことを目標としています。お子様の今後の小学校、中学校、高校と集団で過ごす時間を想定し、苦手に対するヘルプや社会性を身につける準備期間と考えています。</p>
-						</div>
-						<!-- p-q-a-box__body -->
-					</div>
-					<!-- p-q-a__box p-q-a-box -->
-
-					<div class="p-q-a__box p-q-a-box">
-						<div class="p-q-a-box__head">
-							<div class="p-q-a-box__head-img">
-								<img src="./assets/img/question-icon.png" alt="Qの文字画像" />
-							</div>
-							<p class="p-q-a-box__head-text">療育中の様子が知りたいです</p>
-						</div>
-						<div class="p-q-a-box__body">
-							<p class="p-q-a-box__body-text">隣接した待合室にて、プレイルーム内での療育の様子が一部分かるよう、モニターを設置しております。 <br />また、活動の後半には職員がフィードバックを行う時間を設けております。当日中には、支援ツールなどにより、活動の様子を保護者様宛にお送りしております。</p>
-						</div>
-						<!-- p-q-a-box__body -->
-					</div>
-					<!-- p-q-a__box p-q-a-box -->
+					<!-- p-about__flex-wrap -->
 				</div>
-				<!-- p-q-a__boxes -->
+				<!-- p-about__card -->
 			</div>
-			<!-- p-q-a__inner -->
-		</div>
-		<!-- p-q-a__wrap -->
-	</section>
+			<!-- p-about__inner l-inner -->
+		</section>
 
-	<section class="p-news">
-		<img class="p-news__head-img" src="./assets/img/children-2.png" alt="男の子と女の子のイラスト" />
-		<img class="p-news__head-img" src="./assets/img/children-3.png" alt="滑り台を滑る女の子のイラスト" />
-		<div class="p-news__inner">
-			<h2 class="c-heading-title">
-				<span class="c-heading-title__text">おしらせ</span>
-				<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
-			</h2>
-			<p class="p-news__main-text">ぷっくでの日常をお届けしています。</p>
-			<div class="p-news__content">
-				<div class="p-news__cards">
-					<a class="p-news__card p-news-card">
-						<div class="p-news-card__head">
-							<div class="p-news-card__img">
-								<img src="./assets/img/program-1.png" alt="ブログ写真" />
-							</div>
-							<!-- p-news-card__img -->
-						</div>
-						<!-- p-news-card__head -->
-						<div class="p-news-card__body">
-							<div class="p-news-card__categories">
-								<div class="p-news-card__category">カテゴリー</div>
-							</div>
-							<p class="p-news-card__text">ここにブログのタイトルがはいりますここにブログのタイトルがはいります</p>
-							<time datetime="" class="p-news-card__time">2024.11.30</time>
-						</div>
-						<!-- p-news-card__body -->
-					</a>
-					<!-- p-news__card p-news-card -->
-
-					<a class="p-news__card p-news-card">
-						<div class="p-news-card__head">
-							<div class="p-news-card__img">
-								<img src="./assets/img/program-1.png" alt="ブログ写真" />
-							</div>
-							<!-- p-news-card__img -->
-						</div>
-						<!-- p-news-card__head -->
-						<div class="p-news-card__body">
-							<div class="p-news-card__categories">
-								<div class="p-news-card__category">カテゴリー</div>
-							</div>
-							<p class="p-news-card__text">ここにブログのタイトルがはいりますここにブログのタイトルがはいります</p>
-							<time datetime="" class="p-news-card__time">2024.11.30</time>
-						</div>
-						<!-- p-news-card__body -->
-					</a>
-					<!-- p-news__card p-news-card -->
-
-					<a class="p-news__card p-news-card">
-						<div class="p-news-card__head">
-							<div class="p-news-card__img">
-								<img src="./assets/img/program-1.png" alt="ブログ写真" />
-							</div>
-							<!-- p-news-card__img -->
-						</div>
-						<!-- p-news-card__head -->
-						<div class="p-news-card__body">
-							<div class="p-news-card__categories">
-								<div class="p-news-card__category">カテゴリー</div>
-							</div>
-							<p class="p-news-card__text">ここにブログのタイトルがはいりますここにブログのタイトルがはいります</p>
-							<time datetime="" class="p-news-card__time">2024.11.30</time>
-						</div>
-						<!-- p-news-card__body -->
-					</a>
-					<!-- p-news__card p-news-card -->
-				</div>
-				<!-- p-news__cards -->
-
-				<div class="p-news__archive-link">
-					<a href="#">
-						<span>おしらせ一覧</span>
-					</a>
-				</div>
-			</div>
-			<!-- p-news__content -->
-		</div>
-		<!-- p-news__inner -->
-	</section>
-
-	<section class="p-access">
-		<div class="p-access__map --sp">
-			<div class="p-access__map-img">
-				<img src="./assets/img/root-map.png" alt="マップの画像" />
-			</div>
-			<div class="p-access__map-body">
-				<ul class="p-access__map-list">
-					<li>1.旗の台駅南口を出て、東急ストアフードの角を右折し、稲荷通りの赤いゲートをくぐります</li>
-					<li>2.そのまま真っすぐ進み、稲荷通りの出口のゲートを抜けて左折します</li>
-					<li>3.40mほど進み、左手に見えるグレーの大きなビルの2階がぷっくです</li>
-				</ul>
-			</div>
-			<!-- p-access__map-body -->
-			<img class="p-access__map-icon" src="./assets/img/town.png" alt="家のイラスト" />
-		</div>
-		<!-- p-access__map -->
-
-		<div class="p-access__inner">
-			<div class="p-access__card">
-				<div class="p-access__card-inner">
+		<section id="features" class="p-features">
+			<div class="p-features__inner">
+				<div class="p-features__card">
 					<h2 class="c-heading-title">
-						<span class="c-heading-title__text">アクセス</span>
+						<span class="c-heading-title__text">ぷっくの特徴</span>
 						<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
 					</h2>
-					<div class="p-access__content">
-						<div class="p-access__info">
-							<div class="p-access__info-record">
-								<div class="p-access__info-head">施設名</div>
-								<div class="p-access__info-body">ぷっく旗の台教室</div>
+					<p class="p-features__text">私たち「ぷっく」は受容と交流の精神を軸に、様々なメソッドを使って発達障害のお子様の療育を行います。</p>
+					<div class="p-features__steps">
+						<div class="p-features__step p-step">
+							<div class="p-step__head">
+								<p class="p-step__head-text">STEP</p>
+								<p class="p-step__head-number">01</p>
 							</div>
-							<div class="p-access__info-record">
-								<div class="p-access__info-head">住所</div>
-								<div class="p-access__info-body">〒142-0064 東京都品川区旗の台<br class="u-pc-hidden" />5-15-15 コープ野村旗の台201A</div>
+							<!-- p-step__head -->
+							<div class="p-step__body">
+								<p class="p-step__body-text">安心できるあたたかい<br class="u-pc-hidden" />人間関係を育む</p>
 							</div>
-							<div class="p-access__info-record">
-								<div class="p-access__info-head">電話番号</div>
-								<div class="p-access__info-body">03-6426-9900</div>
-							</div>
-							<div class="p-access__info-record">
-								<div class="p-access__info-head">FAX</div>
-								<div class="p-access__info-body">03-6426-9903</div>
-							</div>
-							<div class="p-access__info-record">
-								<div class="p-access__info-head">開所時間</div>
-								<div class="p-access__info-body">月〜土曜日 9:00～18:00 （日、祝日及び年末年始などはお休み）</div>
-							</div>
-							<div class="p-access__info-record">
-								<div class="p-access__info-head">最寄り駅</div>
-								<div class="p-access__info-body">東急電鉄大井町線または池上線 旗の台駅 南口を出て徒歩３分</div>
-							</div>
+							<!-- p-step__body -->
 						</div>
-						<!-- p-access__info -->
-
-						<div class="p-access__map --pc">
-							<div class="p-access__map-img">
-								<img src="./assets/img/pc/root-map.png" alt="マップの画像" />
+						<!-- p-features__step p-step -->
+						<div class="p-features__step p-step">
+							<div class="p-step__head">
+								<p class="p-step__head-text">STEP</p>
+								<p class="p-step__head-number">02</p>
 							</div>
-							<div class="p-access__map-body">
-								<ul class="p-access__map-list">
-									<li>1.旗の台駅南口を出て、東急ストアフードの角を右折し、稲荷通りの赤いゲートをくぐります</li>
-									<li>2.そのまま真っすぐ進み、稲荷通りの出口のゲートを抜けて左折します</li>
-									<li>3.40mほど進み、左手に見えるグレーの大きなビルの2階がぷっくです</li>
-								</ul>
+							<!-- p-step__head -->
+							<div class="p-step__body">
+								<p class="p-step__body-text">長所を伸ばしつつ、<br class="u-pc-hidden" />人を頼りにしながら<br class="u-sp-hidden" />一緒に<br class="u-pc-hidden" />課題を乗り越える経験を積む</p>
 							</div>
-							<!-- p-access__map-body -->
-							<img class="p-access__map-icon" src="./assets/img/town.png" alt="家のイラスト" />
+							<!-- p-step__body -->
 						</div>
-
-						<div class="p-access__map-imgs">
-							<div class="p-access__imgs">
-								<div class="p-access__img">
-									<picture>
-										<source media="(min-width: 900px)" srcset="./assets/img/pc/access-img-1.png" />
-										<img src="./assets/img/access-img-1.png" alt="外観の画像" />
-									</picture>
-								</div>
-								<div class="p-access__img">
-									<picture>
-										<source media="(min-width: 900px)" srcset="./assets/img/pc/access-img-2.png" />
-										<img src="./assets/img/access-img-2.png" alt="外観の画像" />
-									</picture>
-								</div>
+						<!-- p-features__step p-step -->
+						<div class="p-features__step p-step">
+							<div class="p-step__head">
+								<p class="p-step__head-text">STEP</p>
+								<p class="p-step__head-number">03</p>
 							</div>
-
-							<div class="p-access__google-map">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202.7459900387829!2d139.69895751740677!3d35.60464918910645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ac82ee55555%3A0xe7fc85d936e8c1f2!2z44G344Gj44GPIOaXl-OBruWPsOaVmeWupA!5e0!3m2!1sja!2sjp!4v1732267280049!5m2!1sja!2sjp" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							<!-- p-step__head -->
+							<div class="p-step__body">
+								<p class="p-step__body-text">手ごたえや達成感によって<br class="u-pc-hidden" />自尊心を育て、<br class="u-sp-hidden" />苦手なことにも<br class="u-pc-hidden" />挑戦する気持ちをもつ</p>
 							</div>
+							<!-- p-step__body -->
 						</div>
-						<!-- p-access__map-imgs -->
+						<!-- p-features__step p-step -->
 					</div>
-					<!-- p-access__content -->
+					<!-- p-features__steps -->
 				</div>
-				<!-- p-access__card-inner -->
+				<!-- p-features__card -->
 			</div>
-			<!-- p-access__card -->
-		</div>
-		<!-- p-access__inner -->
-	</section>
+			<!-- p-features__inner -->
+		</section>
 
-	<div class="yohaku"></div>
+		<section id="policy" class="p-policy">
+			<div class="p-policy__wrap">
+				<div class="p-policy__inner">
+					<h2 class="c-heading-title">
+						<span class="c-heading-title__text">療育方針</span>
+						<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
+					</h2>
+					<div class="p-policy__text-wrap">
+						<p class="p-policy__text-main">【5領域支援】</p>
+						<p class="p-policy__text-sub">
+							ぷっくでは、児童発達支援の5領域に基づき療育を行っています。<br />
+							「苦手なところを治す」よりも、ひとりひとりの特性や発達段階に合わせたより効果的な支援に努めています。<br />
+							「苦手の克服」は後期の取り組みと考えております。
+						</p>
+					</div>
+					<div class="p-policy__boxes">
+						<div class="p-policy__box">
+							<h3 class="p-policy__box-title">健康生活</h3>
+							<div class="p-policy__box-img">
+								<picture>
+									<source media="(min-width: 900px)" srcset="./assets/img/pc/policy-1.png" />
+									<img src="./assets/img/policy-1.png" alt="ハートの画像" />
+								</picture>
+							</div>
+						</div>
+
+						<div class="p-policy__box">
+							<h3 class="p-policy__box-title">運動感覚</h3>
+							<div class="p-policy__box-img">
+								<picture>
+									<source media="(min-width: 900px)" srcset="./assets/img/pc/policy-2.png" />
+									<img src="./assets/img/policy-2.png" alt="バスケットボールの画像" />
+								</picture>
+							</div>
+						</div>
+
+						<div class="p-policy__box">
+							<h3 class="p-policy__box-title">認知行動</h3>
+							<div class="p-policy__box-img">
+								<picture>
+									<source media="(min-width: 900px)" srcset="./assets/img/pc/policy-3.png" />
+									<img src="./assets/img/policy-3.png" alt="人の頭の画像" />
+								</picture>
+							</div>
+						</div>
+
+						<div class="p-policy__box">
+							<h3 class="p-policy__box-title">
+								言語<br />
+								コミュニケーション
+							</h3>
+							<div class="p-policy__box-img">
+								<picture>
+									<source media="(min-width: 900px)" srcset="./assets/img/pc/policy-4.png" />
+									<img src="./assets/img/policy-4.png" alt="吹き出しの画像" />
+								</picture>
+							</div>
+						</div>
+
+						<div class="p-policy__box">
+							<h3 class="p-policy__box-title">
+								人間関係<br />
+								社会性
+							</h3>
+							<div class="p-policy__box-img">
+								<picture>
+									<source media="(min-width: 900px)" srcset="./assets/img/pc/policy-5.png" />
+									<img src="./assets/img/policy-5.png" alt="複数人の画像" />
+								</picture>
+							</div>
+							<!-- p-policy__box-img -->
+						</div>
+						<!-- p-policy__box -->
+					</div>
+					<!-- p-policy__boxes -->
+				</div>
+				<!-- p-policy__inner -->
+			</div>
+			<!-- p-policy__wrap -->
+
+			<img class="p-policy__balloon-img" src="./assets/img/balloon.png" alt="風船の画像" />
+			<img class="p-policy__balloon-img" src="./assets/img/balloon.png" alt="風船の画像" />
+		</section>
+
+		<section id="program" class="p-program">
+			<div class="p-program__inner">
+				<div class="p-program__sp-img">
+					<img src="./assets/img/program-1.png" alt="積み木をしている子供の画像" />
+				</div>
+				<div class="p-program__sp-img">
+					<img src="./assets/img/program-2.png" alt="ブロック遊びをしている子供の画像" />
+				</div>
+				<div class="p-program__sp-img">
+					<img src="./assets/img/program-3.png" alt="積み木をしている子供の画像" />
+				</div>
+				<div class="p-program__sp-img">
+					<img src="./assets/img/program-4.png" alt="棚の画像" />
+				</div>
+				<h2 class="c-heading-title">
+					<span class="c-heading-title__text">プログラム内容</span>
+					<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
+				</h2>
+				<p class="p-program__text">
+					ぷっくは、お子様への療育だけでなく、保護者のサポート、さらに地域の方との連携も大事にしていきます。<br />
+					療育プログラムだけでなく、保護者対象の研究会、地域交流会イベントも開催致しますので、ぜひ積極的にご参加ください。
+				</p>
+				<div class="p-program__boxes">
+					<div class="p-program__box">
+						<div class="p-program__box-wrap">
+							<div class="p-program__box-pc-img">
+								<img src="./assets/img/music.png" alt="音符の画像" />
+							</div>
+							<div class="p-program__box-content-wrap">
+								<div class="p-program__box-head">
+									<img class="p-program__box-img" src="./assets/img/music.png" alt="音符の画像" />
+									<h3 class="p-program__box-title">音楽療法</h3>
+								</div>
+								<div class="p-program__box-body">
+									<p class="p-program__box-text">月替わりの歌を伴奏に合わせて歌います。月日の流れや、季節のイベントなどもおおまかに意識できることを目指しています。また、鈴などの音が出る楽器を自ら奏で、リズムを感じ取ることや、職員のまねを楽しみます。わらべうたや手あそびでは、お友だちとのふれあいで仲間意識を持ち、手指や体を動かすことで思考と運動の連動を促します。</p>
+								</div>
+								<!-- p-program__box-body -->
+							</div>
+							<!-- p-program__box-content-wrap -->
+						</div>
+						<!-- p-program__box-wrap -->
+					</div>
+					<!-- p-program__box -->
+
+					<div class="p-program__box">
+						<div class="p-program__box-wrap">
+							<div class="p-program__box-pc-img">
+								<img src="./assets/img/exercise.png" alt="バスケットボールの画像" />
+							</div>
+							<div class="p-program__box-content-wrap">
+								<div class="p-program__box-head">
+									<img class="p-program__box-img" src="./assets/img/exercise.png" alt="バスケットボールの画像" />
+									<h3 class="p-program__box-title">運動療法</h3>
+								</div>
+								<div class="p-program__box-body">
+									<p class="p-program__box-text">身体を大きく動かす粗大運動をメインに取り組みます。季節ごとの音楽に合わせて、比較的難しくないダンスを楽しみます。また、走る、跳ぶ、押す、引く、投げるなど、四肢を動かしながら、バランス感覚や協調運動を連動させたり、力の加減をコントロールする力を養います。</p>
+								</div>
+								<!-- p-program__box-body -->
+							</div>
+							<!-- p-program__box-content-wrap -->
+						</div>
+						<!-- p-program__box-wrap -->
+					</div>
+					<!-- p-program__box -->
+
+					<div class="p-program__box">
+						<div class="p-program__box-wrap">
+							<div class="p-program__box-pc-img">
+								<img src="./assets/img//relaxation.png" alt="カップの画像" />
+							</div>
+							<div class="p-program__box-content-wrap">
+								<div class="p-program__box-head">
+									<img class="p-program__box-img" src="./assets/img//relaxation.png" alt="カップの画像" />
+									<h3 class="p-program__box-title">リラクゼーション</h3>
+								</div>
+								<div class="p-program__box-body">
+									<p class="p-program__box-text">ぷっくでは「スヌーズレン」を取り入れています。聴覚、視覚、嗅覚、触覚の感覚刺激空間の中で、心身リラックスを図ります。五感のうち4つの感覚を刺激して、心地よさに身を委ねます。運動療育の後にこのプログラムを設定することで、より休息の時間を味わうことができます</p>
+								</div>
+								<!-- p-program__box-body -->
+							</div>
+							<!-- p-program__box-content-wrap -->
+						</div>
+						<!-- p-program__box-wrap -->
+					</div>
+					<!-- p-program__box -->
+
+					<div class="p-program__box">
+						<div class="p-program__box-wrap">
+							<div class="p-program__box-pc-img">
+								<img src="./assets/img/exchange.png" alt="複数人の画像" />
+							</div>
+							<div class="p-program__box-content-wrap">
+								<div class="p-program__box-head">
+									<img class="p-program__box-img" src="./assets/img/exchange.png" alt="複数人の画像" />
+									<h3 class="p-program__box-title">課題交流</h3>
+								</div>
+								<div class="p-program__box-body">
+									<p class="p-program__box-text">多くは机上での活動となります。自分の椅子に座るところからはじまり、それぞれの成長や特性に合わせた課題を提供しています。週替わりで、文字や数字に触れたり、はさみやのりを使った製作活動も行います。あそびをとおして、指先を使った微細運動の発達を促していきます。お店やさんなどのごっこあそびや、自分で作る米粉粘土あそび、フィンガーペイントなども人気のプログラムです。</p>
+								</div>
+								<!-- p-program__box-body -->
+							</div>
+							<!-- p-program__box-content-wrap -->
+						</div>
+						<!-- p-program__box-wrap -->
+					</div>
+					<!-- p-program__box -->
+
+					<div class="p-program__box">
+						<div class="p-program__box-wrap">
+							<div class="p-program__box-pc-img">
+								<img src="./assets/img/reading-aloud.png" alt="本を読んでいる人の画像" />
+							</div>
+							<div class="p-program__box-content-wrap">
+								<div class="p-program__box-head">
+									<img class="p-program__box-img" src="./assets/img/reading-aloud.png" alt="本を読んでいる人の画像" />
+									<h3 class="p-program__box-title">読み聞かせ</h3>
+								</div>
+								<div class="p-program__box-body">
+									<p class="p-program__box-text">1日の活動の終わりに向けて、絵本の読み聞かせの時間を設けています。椅子に座り、落ち着いた時間を目指します。目で見て、耳で聞いて、思考力や想像力を育みます。豊かな言葉や表現を身につけ、絵本の世界をお友だちと共有します。</p>
+								</div>
+								<!-- p-program__box-body -->
+							</div>
+							<!-- p-program__box-content-wrap -->
+						</div>
+						<!-- p-program__box-wrap -->
+					</div>
+					<!-- p-program__box -->
+
+					<div class="p-program__box">
+						<div class="p-program__box-wrap">
+							<div class="p-program__box-pc-img">
+								<img src="./assets/img/feed-back.png" alt="吹き出しの画像" />
+							</div>
+							<div class="p-program__box-content-wrap">
+								<div class="p-program__box-head">
+									<img class="p-program__box-img" src="./assets/img/feed-back.png" alt="吹き出しの画像" />
+									<h3 class="p-program__box-title">フィードバック</h3>
+								</div>
+								<div class="p-program__box-body">
+									<p class="p-program__box-text">担当職員が、保護者への活動報告を行います。運動療育や課題交流でのお子様の様子や、プログラムの目的などをお伝えしています。</p>
+								</div>
+								<!-- p-program__box-body -->
+							</div>
+							<!-- p-program__box-content-wrap -->
+						</div>
+						<!-- p-program__box-wrap -->
+					</div>
+					<!-- p-program__box -->
+
+					<div class="p-program__box">
+						<div class="p-program__box-wrap">
+							<div class="p-program__box-pc-img">
+								<img src="./assets/img/discussion.png" alt="複数人で話している画像" />
+							</div>
+							<div class="p-program__box-content-wrap">
+								<div class="p-program__box-head">
+									<img class="p-program__box-img" src="./assets/img/discussion.png" alt="複数人で話している画像" />
+									<h3 class="p-program__box-title">おはなしあい</h3>
+								</div>
+								<div class="p-program__box-body">
+									<p class="p-program__box-text">ぷっくでは、保護者と月に1～2回、個別面談・グループ面談の時間を設けております。ご自宅や園でのお子様の様子や、困りごとだけでなく、できるようになったことなどもお話いいだける機会を設けています。今後の目標を伺ったり、小学校へ向けての準備などを共有し、日常生活へ活かせるアドバイスも行っています。</p>
+								</div>
+								<!-- p-program__box-body -->
+							</div>
+							<!-- p-program__box-content-wrap -->
+						</div>
+						<!-- p-program__box-wrap -->
+					</div>
+					<!-- p-program__box -->
+				</div>
+				<!-- p-program__boxes -->
+
+				<div class="p-program__gallery">
+					<div class="p-program__gallery-img">
+						<img src="./assets/img/program-1.png" alt="積み木をしている子供の画像" />
+					</div>
+					<div class="p-program__gallery-img">
+						<img src="./assets/img/program-2.png" alt="ブロック遊びをしている子供の画像" />
+					</div>
+					<div class="p-program__gallery-img">
+						<img src="./assets/img/program-3.png" alt="積み木をしている子供の画像" />
+					</div>
+					<div class="p-program__gallery-img">
+						<img src="./assets/img/program-4.png" alt="棚の画像" />
+					</div>
+				</div>
+				<!-- p-program__gallery -->
+			</div>
+			<!-- p-program__inner -->
+		</section>
+
+		<section id="day-flow" class="p-day-flow">
+			<img class="p-day-flow__cloud" src="./assets/img/cloud.png" alt="雲の画像" />
+			<img class="p-day-flow__cloud" src="./assets/img/cloud.png" alt="雲の画像" />
+			<img class="p-day-flow__cloud" src="./assets/img/cloud.png" alt="雲の画像" />
+			<img class="p-day-flow__cloud" src="./assets/img/cloud.png" alt="雲の画像" />
+			<img class="p-day-flow__cloud" src="./assets/img/cloud.png" alt="雲の画像" />
+			<div class="p-day-flow__wrap">
+				<div class="p-day-flow__inner">
+					<h2 class="c-heading-title">
+						<span class="c-heading-title__text">一日の流れ</span>
+						<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
+					</h2>
+					<div class="p-day-flow__cards">
+						<div class="p-day-flow__cards-am-pm">
+							<div class="p-day-flow__card p-day-flow-card">
+								<img class="p-day-flow-card__img --first" src="./assets/img/bird-1.png" alt="青い鳥の画像" />
+								<div class="p-day-flow-card-wrap">
+									<h3 class="p-day-flow-card__head --border-green">午前クラス</h3>
+									<div class="p-day-flow-card__body">
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">10:00</p>
+											<p class="p-day-flow-card__program-text">準備・はじめの会</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">10:15</p>
+											<p class="p-day-flow-card__program-text">音楽療育</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">10:30</p>
+											<p class="p-day-flow-card__program-text">運動療育</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">10:45</p>
+											<p class="p-day-flow-card__program-text">水分補給・リラクゼーション</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">11:00</p>
+											<p class="p-day-flow-card__program-text">課題交流</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">11:10</p>
+											<p class="p-day-flow-card__program-text">絵カード・絵本</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">11:15</p>
+											<p class="p-day-flow-card__program-text">おわりの会・帰りの準備</p>
+										</div>
+										<!-- p-day-flow-card__program -->
+									</div>
+									<!-- p-day-flow-card__body -->
+								</div>
+								<!-- p-day-flow-card-wrap -->
+							</div>
+							<!-- p-day-flow__card p-day-flow-card -->
+
+							<div class="p-day-flow__card p-day-flow-card">
+								<img class="p-day-flow-card__img --second" src="./assets/img/bird-2.png" alt="黄色い鳥の画像" />
+								<div class="p-day-flow-card-wrap">
+									<h3 class="p-day-flow-card__head --border-green">午後クラス</h3>
+									<div class="p-day-flow-card__body">
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">15:00</p>
+											<p class="p-day-flow-card__program-text">準備・はじめの会</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">15:15</p>
+											<p class="p-day-flow-card__program-text">音楽療育</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">15:30</p>
+											<p class="p-day-flow-card__program-text">運動療育</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">15:45</p>
+											<p class="p-day-flow-card__program-text">水分補給・リラクゼーション</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">16:00</p>
+											<p class="p-day-flow-card__program-text">課題交流</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">16:10</p>
+											<p class="p-day-flow-card__program-text">絵カード・絵本</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">16:15</p>
+											<p class="p-day-flow-card__program-text">おわりの会・帰りの準備</p>
+										</div>
+										<!-- p-day-flow-card__program -->
+									</div>
+									<!-- p-day-flow-card__body -->
+								</div>
+								<!-- p-day-flow-card-wrap -->
+							</div>
+							<!-- p-day-flow__card p-day-flow-card -->
+						</div>
+						<!-- p-day-flow__cards-am-pm -->
+
+						<div class="p-day-flow__individual-class">
+							<div class="p-day-flow__card p-day-flow-card">
+								<div class="p-day-flow-card-wrap">
+									<h3 class="p-day-flow-card__head --border-pink">個別クラス</h3>
+									<div class="p-day-flow-card__body">
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">13:15</p>
+											<p class="p-day-flow-card__program-text">音楽療育</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">13:30</p>
+											<p class="p-day-flow-card__program-text">運動療育</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">13:45</p>
+											<p class="p-day-flow-card__program-text">水分補給・リラクゼーション</p>
+										</div>
+										<div class="p-day-flow-card__program">
+											<p class="p-day-flow-card__program__time">13:55</p>
+											<p class="p-day-flow-card__program-text">絵カード・絵本</p>
+										</div>
+										<!-- p-day-flow-card__program -->
+									</div>
+									<!-- p-day-flow-card__body -->
+								</div>
+								<!-- p-day-flow-card-wrap -->
+
+								<div class="p-day-flow__detail-pc">
+									<p class="p-day-flow__detail-text">
+										ぷっくでは、小集団療育を基本に療育を進めていきます。<br />
+										個別の課題がある場合や、必要があると判断された場合に、月1回程度、個別療育（50分～）を行い、経験を積み重ねます。<br />
+										日程や内容は、保護者様と相談のうえ決めております。
+									</p>
+									<img src="./assets/img/children-1.png" alt="公園で遊んでいる子ども" />
+								</div>
+								<!-- p-day-flow__detail --pc -->
+							</div>
+							<!-- p-day-flow__individual-class -->
+						</div>
+						<!-- p-day-flow__card p-day-flow-card -->
+					</div>
+					<!-- p-day-flow__cards -->
+
+					<div class="p-day-flow__detail-sp">
+						<p class="p-day-flow__detail-text">
+							ぷっくでは、小集団療育を基本に療育を進めていきます。<br />
+							個別の課題がある場合や、必要があると判断された場合に、月1回程度、個別療育（50分～）を行い、経験を積み重ねます。<br />
+							日程や内容は、保護者様と相談のうえ決めております。
+						</p>
+						<img src="./assets/img/children-1.png" alt="公園で遊んでいる子ども" />
+					</div>
+					<!-- p-day-flow__detail --sp -->
+				</div>
+				<!-- p-day-flow__inner -->
+			</div>
+		</section>
+
+		<section id="usage-flow" class="p-usage-flow">
+			<div class="p-usage-flow__inner">
+				<h2 class="c-heading-title">
+					<span class="c-heading-title__text">ご利用までの流れ</span>
+					<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
+				</h2>
+
+				<p class="p-usage-flow__main-text">
+					小学校入学前で発達支援に気がかりのあるお子様（重症心身障害児を除く）がご利用できます。<br />
+					お住まいの区や市の発行する受給者証が必要となります。<br />
+					児童福祉法に基づく「児童発達支援事業」ですので、自己負担額は一割です。更に所得に応じた上限があります。
+				</p>
+
+				<div class="p-usage-flow__boxes">
+					<div class="p-usage-flow__box p-usage-flow-box">
+						<h3 class="p-usage-flow-box__head">
+							<span class="p-usage-flow-box__head-number">1</span>
+							<span class="p-usage-flow-box__head-text">お問い合わせ</span>
+						</h3>
+						<div class="p-usage-flow-box__body">
+							<p class="p-usage-flow-box__body-text">ご利用を検討されている方は、電話、メールでお問い合わせください</p>
+						</div>
+						<!-- p-usage-flow-box__body -->
+					</div>
+					<!-- p-usage-flow__box p-usage-flow-box -->
+
+					<div class="p-usage-flow__box p-usage-flow-box">
+						<h3 class="p-usage-flow-box__head">
+							<span class="p-usage-flow-box__head-number">2</span>
+							<span class="p-usage-flow-box__head-text">ご相談・体験</span>
+						</h3>
+						<div class="p-usage-flow-box__body">
+							<p class="p-usage-flow-box__body-text">教室に体験及びご相談にきていただきます</p>
+						</div>
+						<!-- p-usage-flow-box__body -->
+					</div>
+					<!-- p-usage-flow__box p-usage-flow-box -->
+
+					<div class="p-usage-flow__box p-usage-flow-box">
+						<h3 class="p-usage-flow-box__head">
+							<span class="p-usage-flow-box__head-number">3</span>
+							<span class="p-usage-flow-box__head-text">受給者証申請</span>
+						</h3>
+						<div class="p-usage-flow-box__body">
+							<p class="p-usage-flow-box__body-text">お住まいの区役所または市役所で申請手続きをお願いいたします</p>
+						</div>
+						<!-- p-usage-flow-box__body -->
+					</div>
+					<!-- p-usage-flow__box p-usage-flow-box -->
+
+					<div class="p-usage-flow__box p-usage-flow-box">
+						<h3 class="p-usage-flow-box__head">
+							<span class="p-usage-flow-box__head-number">4</span>
+							<span class="p-usage-flow-box__head-text">受給者証交付</span>
+						</h3>
+						<div class="p-usage-flow-box__body">
+							<p class="p-usage-flow-box__body-text">申請後2～4週間程度で受給者証が交付されますので、交付されたらご連絡ください</p>
+						</div>
+						<!-- p-usage-flow-box__body -->
+					</div>
+					<!-- p-usage-flow__box p-usage-flow-box -->
+
+					<div class="p-usage-flow__box p-usage-flow-box">
+						<h3 class="p-usage-flow-box__head">
+							<span class="p-usage-flow-box__head-number">5</span>
+							<span class="p-usage-flow-box__head-text">ご利用開始</span>
+						</h3>
+						<div class="p-usage-flow-box__body">
+							<p class="p-usage-flow-box__body-text">ぷっくのご利用スタート！</p>
+						</div>
+						<!-- p-usage-flow-box__body -->
+					</div>
+					<!-- p-usage-flow__box p-usage-flow-box -->
+				</div>
+				<!-- p-usage-flow__boxes -->
+			</div>
+			<!-- p-usage-flow__inner -->
+		</section>
+
+		<section id="message" class="p-message">
+			<div class="p-message__inner">
+				<div class="p-message__card p-message-card">
+					<div class="p-message-card__content">
+						<h2 class="p-message-card__title">
+							<span class="p-message-card__title-text">スタッフからの<span class="u-inline-block">メッセージ</span></span>
+						</h2>
+						<p class="p-message-card__text">
+							「できないこと」よりもまずは「できること」に注目して長所を伸ばし、その子らしく、いきいきとした生活を送ることが一番大事だと考えます。<br />
+							我々スタッフは専門的な知識と技術で療育を行い、お子様へのアプローチだけでなく、保護者へのフィードバックやアドバイスを通じ、お子様の伸びる力を支援します。
+						</p>
+						<img class="p-message-card__content-img" src="./assets/img/pens.png" alt="クレヨンの画像" />
+					</div>
+					<div class="p-message-card__img">
+						<img src="./assets/img/staff-img.png" alt="スタッフの写真" />
+					</div>
+					<!-- p-message-card__img -->
+				</div>
+				<!-- p-message__card p-message-card -->
+			</div>
+			<!-- p-message__inner -->
+		</section>
+
+		<section id="q-a" class="p-q-a">
+			<div class="p-q-a__wrap">
+				<div class="p-q-a__inner">
+					<h2 class="c-heading-title">
+						<span class="c-heading-title__text">よくあるご質問</span>
+						<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
+					</h2>
+					<div class="p-q-a__boxes">
+						<div class="p-q-a__box p-q-a-box">
+							<div class="p-q-a-box__head">
+								<div class="p-q-a-box__head-img">
+									<img src="./assets/img/question-icon.png" alt="Qの文字画像" />
+								</div>
+								<p class="p-q-a-box__head-text">利用料はいくらですか</p>
+							</div>
+							<div class="p-q-a-box__body">
+								<p class="p-q-a-box__body-text">
+									ぷっくは児童発達支援事業のため、児童福祉法に基づき、満3歳を迎えた4月1日より小学校入学前までは、無償化対象事業の施設です。また、東京都の政策により、第2子以降の0～2歳のお子様は、世帯収入に関わらず無償化の対象となっております。<br />
+									0～2歳の第1子のご利用料は、国や自治体が9割を負担し、1割を保護者に負担していただくこととなり、その上限は37,200円です。
+								</p>
+							</div>
+							<!-- p-q-a-box__body -->
+						</div>
+						<!-- p-q-a__box p-q-a-box -->
+
+						<div class="p-q-a__box p-q-a-box">
+							<div class="p-q-a-box__head">
+								<div class="p-q-a-box__head-img">
+									<img src="./assets/img/question-icon.png" alt="Qの文字画像" />
+								</div>
+								<p class="p-q-a-box__head-text">どんな子が通っていますか</p>
+							</div>
+							<div class="p-q-a-box__body">
+								<p class="p-q-a-box__body-text">保育園、幼稚園、療育センターなどに在籍しながらぷっくに通われているお子様や、家庭保育のお子様などさまざまです。</p>
+							</div>
+							<!-- p-q-a-box__body -->
+						</div>
+						<!-- p-q-a__box p-q-a-box -->
+
+						<div class="p-q-a__box p-q-a-box">
+							<div class="p-q-a-box__head">
+								<div class="p-q-a-box__head-img">
+									<img src="./assets/img/question-icon.png" alt="Qの文字画像" />
+								</div>
+								<p class="p-q-a-box__head-text">母子分離ができていなくても大丈夫ですか</p>
+							</div>
+							<div class="p-q-a-box__body">
+								<p class="p-q-a-box__body-text">親子教室ではないため基本的には母子分離のプログラムを組んでおりますが、お子様の年齢や不安、体調などに寄り添い、適宜様子を見ながら母子分離を進めていきますので、ご安心ください。</p>
+							</div>
+							<!-- p-q-a-box__body -->
+						</div>
+						<!-- p-q-a__box p-q-a-box -->
+
+						<div class="p-q-a__box p-q-a-box">
+							<div class="p-q-a-box__head">
+								<div class="p-q-a-box__head-img">
+									<img src="./assets/img/question-icon.png" alt="Qの文字画像" />
+								</div>
+								<p class="p-q-a-box__head-text">送迎はありますか</p>
+							</div>
+							<div class="p-q-a-box__body">
+								<p class="p-q-a-box__body-text">基本的には、保護者様の送り迎えで通っていただく教室です。事前の申し出により、祖父母や地域のファミリーサポート制度での送迎で通われているお子様もいらっしゃいますので、共働き世帯などでもご活用いただければと思います。</p>
+							</div>
+							<!-- p-q-a-box__body -->
+						</div>
+						<!-- p-q-a__box p-q-a-box -->
+
+						<div class="p-q-a__box p-q-a-box">
+							<div class="p-q-a-box__head">
+								<div class="p-q-a-box__head-img">
+									<img src="./assets/img/question-icon.png" alt="Qの文字画像" />
+								</div>
+								<p class="p-q-a-box__head-text">なぜ集団療育なのですか</p>
+							</div>
+							<div class="p-q-a-box__body">
+								<p class="p-q-a-box__body-text">ぷっくの集団療育は小集団（2～6名）のため、園生活のような規模ではございません。園生活に慣れる体験や、園生活での困りごとなどを、より小さい規模の小集団で解決していく力を育むことを目標としています。お子様の今後の小学校、中学校、高校と集団で過ごす時間を想定し、苦手に対するヘルプや社会性を身につける準備期間と考えています。</p>
+							</div>
+							<!-- p-q-a-box__body -->
+						</div>
+						<!-- p-q-a__box p-q-a-box -->
+
+						<div class="p-q-a__box p-q-a-box">
+							<div class="p-q-a-box__head">
+								<div class="p-q-a-box__head-img">
+									<img src="./assets/img/question-icon.png" alt="Qの文字画像" />
+								</div>
+								<p class="p-q-a-box__head-text">療育中の様子が知りたいです</p>
+							</div>
+							<div class="p-q-a-box__body">
+								<p class="p-q-a-box__body-text">隣接した待合室にて、プレイルーム内での療育の様子が一部分かるよう、モニターを設置しております。 <br />また、活動の後半には職員がフィードバックを行う時間を設けております。当日中には、支援ツールなどにより、活動の様子を保護者様宛にお送りしております。</p>
+							</div>
+							<!-- p-q-a-box__body -->
+						</div>
+						<!-- p-q-a__box p-q-a-box -->
+					</div>
+					<!-- p-q-a__boxes -->
+				</div>
+				<!-- p-q-a__inner -->
+			</div>
+			<!-- p-q-a__wrap -->
+		</section>
+
+		<section id="news" class="p-news">
+			<img class="p-news__head-img" src="./assets/img/children-2.png" alt="男の子と女の子のイラスト" />
+			<img class="p-news__head-img" src="./assets/img/children-3.png" alt="滑り台を滑る女の子のイラスト" />
+			<div class="p-news__inner">
+				<h2 class="c-heading-title">
+					<span class="c-heading-title__text">おしらせ</span>
+					<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
+				</h2>
+				<p class="p-news__main-text">ぷっくでの日常をお届けしています。</p>
+				<div class="p-news__content">
+					<div class="p-news__cards">
+						<a href="#" class="p-news__card p-news-card">
+							<div class="p-news-card__head">
+								<div class="p-news-card__img">
+									<img src="./assets/img/program-1.png" alt="ブログ写真" />
+								</div>
+								<!-- p-news-card__img -->
+							</div>
+							<!-- p-news-card__head -->
+							<div class="p-news-card__body">
+								<div class="p-news-card__categories">
+									<div class="p-news-card__category">カテゴリー</div>
+								</div>
+								<p class="p-news-card__text">ここにブログのタイトルがはいりますここにブログのタイトルがはいります</p>
+								<time datetime="" class="p-news-card__time">2024.11.30</time>
+							</div>
+							<!-- p-news-card__body -->
+						</a>
+						<!-- p-news__card p-news-card -->
+
+						<a href="#" class="p-news__card p-news-card">
+							<div class="p-news-card__head">
+								<div class="p-news-card__img">
+									<img src="./assets/img/program-1.png" alt="ブログ写真" />
+								</div>
+								<!-- p-news-card__img -->
+							</div>
+							<!-- p-news-card__head -->
+							<div class="p-news-card__body">
+								<div class="p-news-card__categories">
+									<div class="p-news-card__category">カテゴリー</div>
+								</div>
+								<p class="p-news-card__text">ここにブログのタイトルがはいりますここにブログのタイトルがはいります</p>
+								<time datetime="" class="p-news-card__time">2024.11.30</time>
+							</div>
+							<!-- p-news-card__body -->
+						</a>
+						<!-- p-news__card p-news-card -->
+
+						<a href="#" class="p-news__card p-news-card">
+							<div class="p-news-card__head">
+								<div class="p-news-card__img">
+									<img src="./assets/img/program-1.png" alt="ブログ写真" />
+								</div>
+								<!-- p-news-card__img -->
+							</div>
+							<!-- p-news-card__head -->
+							<div class="p-news-card__body">
+								<div class="p-news-card__categories">
+									<div class="p-news-card__category">カテゴリー</div>
+								</div>
+								<p class="p-news-card__text">ここにブログのタイトルがはいりますここにブログのタイトルがはいります</p>
+								<time datetime="" class="p-news-card__time">2024.11.30</time>
+							</div>
+							<!-- p-news-card__body -->
+						</a>
+						<!-- p-news__card p-news-card -->
+					</div>
+					<!-- p-news__cards -->
+
+					<div class="p-news__archive-link">
+						<a href="#">
+							<span>おしらせ一覧</span>
+						</a>
+					</div>
+				</div>
+				<!-- p-news__content -->
+			</div>
+			<!-- p-news__inner -->
+		</section>
+
+		<section id="access" class="p-access">
+			<div class="p-access__map --sp">
+				<div class="p-access__map-img">
+					<img src="./assets/img/root-map.png" alt="マップの画像" />
+				</div>
+				<div class="p-access__map-body">
+					<ul class="p-access__map-list">
+						<li>1.旗の台駅南口を出て、東急ストアフードの角を右折し、稲荷通りの赤いゲートをくぐります</li>
+						<li>2.そのまま真っすぐ進み、稲荷通りの出口のゲートを抜けて左折します</li>
+						<li>3.40mほど進み、左手に見えるグレーの大きなビルの2階がぷっくです</li>
+					</ul>
+				</div>
+				<!-- p-access__map-body -->
+				<img class="p-access__map-icon" src="./assets/img/town.png" alt="家のイラスト" />
+			</div>
+			<!-- p-access__map -->
+
+			<div class="p-access__inner">
+				<div class="p-access__card">
+					<div class="p-access__card-inner">
+						<h2 class="c-heading-title">
+							<span class="c-heading-title__text">アクセス</span>
+							<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
+						</h2>
+						<div class="p-access__content">
+							<div class="p-access__info">
+								<div class="p-access__info-record">
+									<div class="p-access__info-head">施設名</div>
+									<div class="p-access__info-body">ぷっく旗の台教室</div>
+								</div>
+								<div class="p-access__info-record">
+									<div class="p-access__info-head">住所</div>
+									<div class="p-access__info-body">〒142-0064 東京都品川区旗の台<br class="u-pc-hidden" />5-15-15 コープ野村旗の台201A</div>
+								</div>
+								<div class="p-access__info-record">
+									<div class="p-access__info-head">電話番号</div>
+									<div class="p-access__info-body">03-6426-9900</div>
+								</div>
+								<div class="p-access__info-record">
+									<div class="p-access__info-head">FAX</div>
+									<div class="p-access__info-body">03-6426-9903</div>
+								</div>
+								<div class="p-access__info-record">
+									<div class="p-access__info-head">開所時間</div>
+									<div class="p-access__info-body">月〜土曜日 9:00～18:00 （日、祝日及び年末年始などはお休み）</div>
+								</div>
+								<div class="p-access__info-record">
+									<div class="p-access__info-head">最寄り駅</div>
+									<div class="p-access__info-body">東急電鉄大井町線または池上線 旗の台駅 南口を出て徒歩３分</div>
+								</div>
+							</div>
+							<!-- p-access__info -->
+
+							<div class="p-access__map --pc">
+								<div class="p-access__map-img">
+									<img src="./assets/img/pc/root-map.png" alt="マップの画像" />
+								</div>
+								<div class="p-access__map-body">
+									<ul class="p-access__map-list">
+										<li>1.旗の台駅南口を出て、東急ストアフードの角を右折し、稲荷通りの赤いゲートをくぐります</li>
+										<li>2.そのまま真っすぐ進み、稲荷通りの出口のゲートを抜けて左折します</li>
+										<li>3.40mほど進み、左手に見えるグレーの大きなビルの2階がぷっくです</li>
+									</ul>
+								</div>
+								<!-- p-access__map-body -->
+								<img class="p-access__map-icon" src="./assets/img/town.png" alt="家のイラスト" />
+							</div>
+
+							<div class="p-access__map-imgs">
+								<div class="p-access__imgs">
+									<div class="p-access__img">
+										<picture>
+											<source media="(min-width: 900px)" srcset="./assets/img/pc/access-img-1.png" />
+											<img src="./assets/img/access-img-1.png" alt="外観の画像" />
+										</picture>
+									</div>
+									<div class="p-access__img">
+										<picture>
+											<source media="(min-width: 900px)" srcset="./assets/img/pc/access-img-2.png" />
+											<img src="./assets/img/access-img-2.png" alt="外観の画像" />
+										</picture>
+									</div>
+								</div>
+
+								<div class="p-access__google-map">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202.7459900387829!2d139.69895751740677!3d35.60464918910645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ac82ee55555%3A0xe7fc85d936e8c1f2!2z44G344Gj44GPIOaXl-OBruWPsOaVmeWupA!5e0!3m2!1sja!2sjp!4v1732267280049!5m2!1sja!2sjp" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+								</div>
+							</div>
+							<!-- p-access__map-imgs -->
+						</div>
+						<!-- p-access__content -->
+					</div>
+					<!-- p-access__card-inner -->
+				</div>
+				<!-- p-access__card -->
+			</div>
+			<!-- p-access__inner -->
+		</section>
+
+		<section id="contact" class="p-contact">
+			<div class="p-contact__inner">
+				<div class="p-contact__card">
+					<h2 class="c-heading-title">
+						<span class="c-heading-title__text">お問い合わせ</span>
+						<img class="c-heading-title__img" src="./assets/img/heading-under.png" alt="タイトル下横棒の画像" />
+					</h2>
+					<p class="p-contact__main-text">ご相談やご見学予約など、お気軽にご連絡ください。</p>
+					<div class="p-contact__content">
+						<div class="p-contact__links">
+							<a class="p-contact__link --phone" href="tel:03-6426-9900">
+								<img src="./assets/img/phone-pink.png" alt="電話のマーク" />
+								<span>03-6426-9900</span>
+							</a>
+
+							<a class="p-contact__link --phone" href="tel:03-6426-9900">
+								<img src="./assets/img/phone-pink.png" alt="電話のマーク" />
+								<span>03-6426-9900</span>
+							</a>
+
+							<a class="p-contact__link --contact" href="#">
+								<img src="./assets/img/sent-arrow.png" alt="紙飛行機" />
+								<span>お問い合わせフォーム</span>
+							</a>
+						</div>
+						<!-- p-contact__links -->
+					</div>
+					<!-- p-contact__content -->
+				</div>
+				<!-- p-contact__card -->
+			</div>
+			<!-- p-contact__inner -->
+		</section>
+	</main>
+
+	<footer class="p-footer">
+		<div class="p-footer__inner">
+			<div class="p-footer__page-links">
+				<ul class="p-footer__page-link-list">
+					<li><a href="#about">ぷっくについて</a></li>
+					<li><a href="#program">プログラム内容</a></li>
+					<li><a href="#usage-flow">ご利用までの流れ</a></li>
+					<li><a href="#q-a">よくあるご質問</a></li>
+					<li><a href="#news">おしらせ</a></li>
+					<li><a href="#access">アクセス</a></li>
+					<li><a href="#contact">お問い合わせ</a></li>
+				</ul>
+			</div>
+			<div class="p-footer__content">
+				<a href="https://www.instagram.com/puq.hatanodai/" target="_blank" class="p-footer__instagram-link">
+					<img src="./assets/img/instagram-icon.png" alt="インスタグラムのアイコン画像" />
+				</a>
+				<a href="#" class="p-footer__logo">
+					<img src="./assets/img/logo.png" alt="ぷっく旗の台ロゴ" />
+				</a>
+			</div>
+			<!-- p-footer__content -->
+
+			<small class="p-footer__copyright">&copy;2024 ぷっく旗の台</small>
+		</div>
+		<!-- p-footer__inner -->
+	</footer>
+
+	<div class="c-banner">
+		<div class="c-banner__wrap">
+			<button class="c-banner__cancel" type="button">
+				<img src="./assets/img/cancel.png" alt="バツマークアイコン" />
+			</button>
+			<a href="https://www.ledex.co.jp/products/cb002pro2.php?gad_source=1&gclid=Cj0KCQjwsoe5BhDiARIsAOXVoUsdQr2E3WcMcdBqDImNX0zj_6WeTyQ9GOC2Vq5roNtD5GTRX17cIKsaAnwSEALw_wcB" target="_blank" class="c-banner__link">
+				<span class="c-banner__link-text">ぷっくでも<br class="u-sp-hidden" />導入中</span>
+			</a>
+		</div>
+		<!-- c-banner__wrap -->
+	</div>
+	<!-- c-banner -->
+
+	<div class="c-to-top" tabindex="0">
+		<img src="./assets/img/top-img.png" alt="TOP" />
+	</div>
 
 	<script src="./assets/js/script.js"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

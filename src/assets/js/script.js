@@ -94,3 +94,86 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".p-header");
+  const drawerIcon = document.querySelector(".p-drawer__icon");
+  const drawerContent = document.querySelector(".p-drawer");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY < lastScrollY) {
+      // 上方向へスクロール
+      header.classList.remove("js-slide-up");
+      drawerIcon.classList.remove("js-slide-up");
+      drawerContent.classList.remove("js-slide-up");
+    } else {
+      // 下方向へスクロール
+      header.classList.add("js-slide-up");
+      drawerIcon.classList.add("js-slide-up");
+      drawerContent.classList.add("js-slide-up");
+    }
+    lastScrollY = window.scrollY;
+  });
+});
+
+const banner = document.querySelector(".c-banner");
+const bannerCancel = document.querySelector(".c-banner__cancel");
+bannerCancel.addEventListener("click", () => {
+  banner.classList.add("display-none");
+});
+
+// TOPへ戻るボタン
+document.addEventListener("DOMContentLoaded", function () {
+  let toTopButton = document.querySelector(".c-to-top");
+
+  // スクロールイベントを監視してTo Topボタンを制御
+  window.addEventListener("scroll", function () {
+    // 現在のスクロール位置を取得
+    let scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    const mediaQuery = window.matchMedia("(min-width: 900px)");
+    let showLength = 0;
+
+    if (mediaQuery.matches) {
+      showLength = 300;
+    } else {
+      showLength = 100;
+    }
+
+    // スクロール位置が一定値よりも大きい場合にTo Topボタンを表示、それ以外は非表示にする
+    if (scrollPosition > showLength) {
+      toTopButton.classList.add("js-show");
+    } else {
+      toTopButton.classList.remove("js-show");
+    }
+  });
+
+  // To Topボタンがクリックされたときにページの先頭にスクロールする
+  toTopButton.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+
+// スムーススクロール
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      const targetId = item.getAttribute("href");
+      const target = document.querySelector(targetId);
+      if (target) {
+        const headerOffset = document.querySelector(".p-header__upper").offsetHeight; // headerの高さを取得
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+});

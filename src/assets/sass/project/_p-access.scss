@@ -52,7 +52,7 @@
   }
 
   @include global.mq(lg) {
-    padding: 64px;
+    padding: 64px 64px 61px;
     max-width: calc(928px + 64px * 2);
     margin-inline: auto;
   }

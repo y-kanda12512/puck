@@ -3,7 +3,6 @@
   padding-block: 24px;
   position: relative;
   background: global.$color-white;
-  overflow: hidden;
 
   @include global.mq(lg) {
     padding-block: 40px;
@@ -101,6 +100,7 @@
 }
 
 .p-news-card {
+  display: inline-block;
   border-radius: 16px;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
@@ -113,8 +113,12 @@
 
   @media (any-hover: hover) {
     &:hover {
-      opacity: 0.7;
+      opacity: 0.5;
     }
+  }
+
+  &:focus {
+    outline-offset: 4px;
   }
 }
 
@@ -220,17 +224,21 @@
     letter-spacing: 0.32px;
     background: global.$color-btn-1;
     border-radius: 100vmax;
-    transition: opacity 0.3s ease;
+    transition: background 0.3s ease;
 
     @media (any-hover: hover) {
       &:hover {
-        opacity: 0.7;
+        background: global.$color-treat-3;
 
         span::before {
           transition: translate 0.4s ease;
           translate: 50% -50%;
         }
       }
+    }
+
+    &:focus {
+      outline-offset: 4px;
     }
 
     span {

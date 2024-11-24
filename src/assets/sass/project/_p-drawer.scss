@@ -1,5 +1,4 @@
 @use "../global" as global;
-
 .p-drawer__icon {
   position: fixed;
   right: 16px;
@@ -7,9 +6,15 @@
   width: 48px;
   padding: 7px 7px 0 7px;
   z-index: map-get(global.$layer, drawer-icon);
+  transition: translate 0.1s ease;
 
   @include global.mq(lg) {
     display: none;
+  }
+
+  &.js-slide-up {
+    transition: translate 0.3s ease;
+    translate: 0 -150%;
   }
 
   &.js-show {
@@ -102,6 +107,10 @@
     translate: 0;
     transition: translate 0.6s ease;
   }
+
+  &.js-slide-up {
+    translate: 0 -300%;
+  }
 }
 
 .p-drawer__body {
@@ -189,6 +198,10 @@
   font-weight: 700;
   line-height: 1;
   border-radius: 100vmax;
+
+  &:focus {
+    outline-offset: 4px;
+  }
 }
 
 .p-drawer__btn-img {

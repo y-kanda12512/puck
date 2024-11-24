@@ -1,5 +1,4 @@
 @use "../global" as global;
-
 .p-header {
   position: sticky;
   top: 0;
@@ -7,15 +6,21 @@
   width: 100%;
   z-index: map-get(global.$layer, header);
   background: global.$color-white;
+  transition: translate 0.1s ease;
 
   @include global.mq(lg) {
     position: static;
+  }
+
+  &.js-slide-up {
+    translate: 0 -100%;
+    transition: translate 0.3s ease;
   }
 }
 
 .p-header__inner {
   width: 100%;
-  padding: 8px 16px;
+  padding: 8px 24px;
   margin-inline: auto;
 
   @include global.mq(sm) {
@@ -33,6 +38,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.p-header__logo {
+  transition: opacity 0.3s ease;
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
 .p-header__logo-title {
@@ -104,6 +118,13 @@
     font-weight: 400;
     line-height: 1.75;
     letter-spacing: 0.32px;
+    transition: opacity 0.3s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
 
     img {
       width: 31px;
@@ -126,9 +147,20 @@
   font-weight: 700;
   line-height: 1;
   border-radius: 100vmax;
+  transition: background 0.3s ease;
 
   @include global.mq(xl) {
     margin-left: 32px;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: global.$color-treat-2;
+    }
+  }
+
+  &:focus {
+    outline-offset: 4px;
   }
 }
 
@@ -147,10 +179,7 @@
   }
 }
 
-.p-header__in-page-links {
-}
-
-.p-header__in-page-link-list {
+.p-header__page-link-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
@@ -163,6 +192,16 @@
     font-weight: 400;
     line-height: 1.75;
     letter-spacing: 0.32px;
+    transition: opacity 0.3s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &:focus {
+    }
 
     &::before,
     &::after {
